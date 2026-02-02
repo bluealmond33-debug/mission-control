@@ -6,17 +6,56 @@
       "description": "주식 인사이트 커뮤니티 웹앱 개발. Next.js + Supabase + Vercel.\n\n**현재 상태:** 프론트엔드 6개 화면 디자인 반영 완료. 백엔드 연결 필요.",
       "status": "in_progress",
       "project": "stockpin",
-      "tags": ["dev", "mvp"],
+      "tags": [
+        "dev",
+        "mvp"
+      ],
       "subtasks": [
-        { "id": "sub_001", "title": "Stitch 디자인 → Next.js 변환 (6페이지)", "done": true },
-        { "id": "sub_002", "title": "사이드바 통일 (홈 피드 버전)", "done": true },
-        { "id": "sub_003", "title": "디자인 완성도 체크 & 미세 조정", "done": false },
-        { "id": "sub_004", "title": "Supabase 스키마 설계 + 셋업", "done": false },
-        { "id": "sub_005", "title": "인증 (Supabase Auth)", "done": false },
-        { "id": "sub_006", "title": "API 레이어 + 목업→실데이터 전환", "done": false },
-        { "id": "sub_007", "title": "$티커 멘션 파싱 + 연결", "done": false },
-        { "id": "sub_008", "title": "그래프 뷰 실데이터 반영", "done": false },
-        { "id": "sub_009", "title": "Vercel 배포", "done": false }
+        {
+          "id": "sub_001",
+          "title": "Stitch 디자인 → Next.js 변환 (6페이지)",
+          "done": true
+        },
+        {
+          "id": "sub_002",
+          "title": "사이드바 통일 (홈 피드 버전)",
+          "done": true
+        },
+        {
+          "id": "sub_003",
+          "title": "디자인 완성도 체크 & 미세 조정",
+          "done": false
+        },
+        {
+          "id": "sub_004",
+          "title": "Supabase 스키마 설계 + 셋업",
+          "done": false
+        },
+        {
+          "id": "sub_005",
+          "title": "인증 (Supabase Auth)",
+          "done": false
+        },
+        {
+          "id": "sub_006",
+          "title": "API 레이어 + 목업→실데이터 전환",
+          "done": false
+        },
+        {
+          "id": "sub_007",
+          "title": "$티커 멘션 파싱 + 연결",
+          "done": false
+        },
+        {
+          "id": "sub_008",
+          "title": "그래프 뷰 실데이터 반영",
+          "done": false
+        },
+        {
+          "id": "sub_009",
+          "title": "Vercel 배포",
+          "done": false
+        }
       ],
       "priority": "high",
       "dod": "6개 핵심 페이지가 실제 데이터로 동작하고 Vercel에 배포된 상태",
@@ -35,13 +74,36 @@
       "description": "2월 4주차 예창패 지원. 자금 확보 최우선 과제.",
       "status": "backlog",
       "project": "stockpin",
-      "tags": ["business", "funding"],
+      "tags": [
+        "business",
+        "funding"
+      ],
       "subtasks": [
-        { "id": "sub_001", "title": "사업계획서 작성", "done": false },
-        { "id": "sub_002", "title": "MVP 데모 준비 (배포된 URL)", "done": false },
-        { "id": "sub_003", "title": "시장 분석 / 경쟁사 조사", "done": false },
-        { "id": "sub_004", "title": "팀 구성 정리", "done": false },
-        { "id": "sub_005", "title": "제출", "done": false }
+        {
+          "id": "sub_001",
+          "title": "사업계획서 작성",
+          "done": false
+        },
+        {
+          "id": "sub_002",
+          "title": "MVP 데모 준비 (배포된 URL)",
+          "done": false
+        },
+        {
+          "id": "sub_003",
+          "title": "시장 분석 / 경쟁사 조사",
+          "done": false
+        },
+        {
+          "id": "sub_004",
+          "title": "팀 구성 정리",
+          "done": false
+        },
+        {
+          "id": "sub_005",
+          "title": "제출",
+          "done": false
+        }
       ],
       "priority": "high",
       "dod": "예창패 신청서 제출 완료",
@@ -54,12 +116,31 @@
       "description": "텔레그램 주식 알림봇 운영 및 개선.\n설문 수집: 235개 채널 스크래핑 완료.",
       "status": "in_progress",
       "project": "stockpin",
-      "tags": ["bot", "operations"],
+      "tags": [
+        "bot",
+        "operations"
+      ],
       "subtasks": [
-        { "id": "sub_001", "title": "모닝 브리프 자동화 (AlertPin)", "done": true },
-        { "id": "sub_002", "title": "X 트렌드 리포트 자동화", "done": true },
-        { "id": "sub_003", "title": "설문 응답 분석", "done": false },
-        { "id": "sub_004", "title": "알림 콘텐츠 고도화", "done": false }
+        {
+          "id": "sub_001",
+          "title": "모닝 브리프 자동화 (AlertPin)",
+          "done": true
+        },
+        {
+          "id": "sub_002",
+          "title": "X 트렌드 리포트 자동화",
+          "done": true
+        },
+        {
+          "id": "sub_003",
+          "title": "설문 응답 분석",
+          "done": false
+        },
+        {
+          "id": "sub_004",
+          "title": "알림 콘텐츠 고도화",
+          "done": false
+        }
       ],
       "priority": "medium",
       "comments": [],
@@ -71,10 +152,21 @@
       "description": "매매일지 앱. App Store 출시 완료. 유지보수 모드.",
       "status": "permanent",
       "project": "finch",
-      "tags": ["app", "maintenance"],
+      "tags": [
+        "app",
+        "maintenance"
+      ],
       "subtasks": [
-        { "id": "sub_001", "title": "버그 리포트 모니터링", "done": false },
-        { "id": "sub_002", "title": "사용자 피드백 수집", "done": false }
+        {
+          "id": "sub_001",
+          "title": "버그 리포트 모니터링",
+          "done": false
+        },
+        {
+          "id": "sub_002",
+          "title": "사용자 피드백 수집",
+          "done": false
+        }
       ],
       "priority": "low",
       "comments": [],
@@ -86,14 +178,41 @@
       "description": "스킬 설치, 메모리 관리, 자동화 최적화.\n12개 ClawHub 스킬 설치 완료.",
       "status": "in_progress",
       "project": "pin",
-      "tags": ["ai", "optimization"],
+      "tags": [
+        "ai",
+        "optimization"
+      ],
       "subtasks": [
-        { "id": "sub_001", "title": "ClawHub 스킬 12개 설치", "done": true },
-        { "id": "sub_002", "title": "보안 리뷰 완료", "done": true },
-        { "id": "sub_003", "title": "텔레그램 자동 복구 설정", "done": true },
-        { "id": "sub_004", "title": "Proactive Agent 패턴 적용", "done": false },
-        { "id": "sub_005", "title": "옵시디언 vault 정리", "done": false },
-        { "id": "sub_006", "title": "Mission Control 대시보드 셋업", "done": true }
+        {
+          "id": "sub_001",
+          "title": "ClawHub 스킬 12개 설치",
+          "done": true
+        },
+        {
+          "id": "sub_002",
+          "title": "보안 리뷰 완료",
+          "done": true
+        },
+        {
+          "id": "sub_003",
+          "title": "텔레그램 자동 복구 설정",
+          "done": true
+        },
+        {
+          "id": "sub_004",
+          "title": "Proactive Agent 패턴 적용",
+          "done": false
+        },
+        {
+          "id": "sub_005",
+          "title": "옵시디언 vault 정리",
+          "done": false
+        },
+        {
+          "id": "sub_006",
+          "title": "Mission Control 대시보드 셋업",
+          "done": true
+        }
       ],
       "priority": "medium",
       "comments": [],
@@ -101,15 +220,50 @@
     }
   ],
   "projects": [
-    { "id": "stockpin", "name": "StockPin", "color": "#6C5CE7", "icon": "📈" },
-    { "id": "finch", "name": "Finch", "color": "#10b981", "icon": "📱" },
-    { "id": "pin", "name": "Pin 운영", "color": "#f59e0b", "icon": "📌" }
+    {
+      "id": "stockpin",
+      "name": "StockPin",
+      "color": "#6C5CE7",
+      "icon": "📈"
+    },
+    {
+      "id": "finch",
+      "name": "Finch",
+      "color": "#10b981",
+      "icon": "📱"
+    },
+    {
+      "id": "pin",
+      "name": "Pin 운영",
+      "color": "#f59e0b",
+      "icon": "📌"
+    }
   ],
   "activities": [
-    { "type": "completed", "actor": "Pin", "task": "ClawHub 스킬 12개 설치 + 보안 리뷰", "time": "just now" },
-    { "type": "completed", "actor": "Pin", "task": "텔레그램 자동 복구 설정", "time": "30m ago" },
-    { "type": "completed", "actor": "Pin", "task": "StockPin 커뮤니티 6페이지 디자인 반영", "time": "1h ago" },
-    { "type": "created", "actor": "민기", "task": "예비창업패키지 지원", "time": "today" }
+    {
+      "type": "completed",
+      "actor": "Pin",
+      "task": "ClawHub 스킬 12개 설치 + 보안 리뷰",
+      "time": "just now"
+    },
+    {
+      "type": "completed",
+      "actor": "Pin",
+      "task": "텔레그램 자동 복구 설정",
+      "time": "30m ago"
+    },
+    {
+      "type": "completed",
+      "actor": "Pin",
+      "task": "StockPin 커뮤니티 6페이지 디자인 반영",
+      "time": "1h ago"
+    },
+    {
+      "type": "created",
+      "actor": "민기",
+      "task": "예비창업패키지 지원",
+      "time": "today"
+    }
   ],
   "lastUpdated": "2026-02-02T02:58:00Z"
 }
