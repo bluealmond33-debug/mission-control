@@ -1,0 +1,67 @@
+{
+  "crons": [
+    {
+      "id": "b21a20aa-b4f0-4ef1-8dac-6f624f97e017",
+      "name": "☀️ AlertPin 모닝 브리프",
+      "schedule": "0 7 * * *",
+      "scheduleHuman": "Every day at 7:00 AM",
+      "enabled": true,
+      "lastStatus": "ok",
+      "nextRunAt": null
+    },
+    {
+      "id": "ffa8caea-a0ff-440d-b2b0-f5765d63e3a8",
+      "name": "🐦 OpenClaw X 트렌드 리포트",
+      "schedule": "10 7 * * *",
+      "scheduleHuman": "Every day at 7:10 AM",
+      "enabled": true,
+      "lastStatus": "ok",
+      "nextRunAt": null
+    },
+    {
+      "id": "43a4967d-024e-4a4d-a2c7-aacb35ee27ac",
+      "name": "🔄 Pin 자기 업그레이드 (X + ClawdHub)",
+      "schedule": "0 10 */2 * *",
+      "scheduleHuman": "Every 2 days at 10:00 AM",
+      "enabled": true,
+      "lastStatus": "ok",
+      "nextRunAt": null
+    },
+    {
+      "id": "5baada52-4ba8-49fe-9992-977fe9a792a6",
+      "name": "🏥 System Health Check",
+      "schedule": "every 4h",
+      "scheduleHuman": "Every 4 hours",
+      "enabled": true,
+      "lastStatus": "ok",
+      "nextRunAt": null
+    },
+    {
+      "id": "0f1fd71b-ca20-47b7-9873-1c1274afc2b0",
+      "name": "📊 Weekly Metrics Report",
+      "schedule": "0 10 * * 1",
+      "scheduleHuman": "Every Monday at 10:00 AM",
+      "enabled": true,
+      "lastStatus": "ok",
+      "nextRunAt": null
+    },
+    {
+      "id": "ac315876-1304-408b-a615-ee5fe514b1ca",
+      "name": "💾 Backup & Git Check",
+      "schedule": "0 6 * * *",
+      "scheduleHuman": "Daily at 6:00 AM",
+      "enabled": true,
+      "lastStatus": "ok",
+      "nextRunAt": null
+    },
+    {
+      "id": "bf30e5b9-6c13-4a8c-82a3-e5b21be795a7",
+      "name": "📅 Monthly Progress Review",
+      "schedule": "0 9 1 * *",
+      "scheduleHuman": "1st of every month at 9:00 AM",
+      "enabled": true,
+      "lastStatus": "ok",
+      "nextRunAt": null
+    }
+  ]
+}

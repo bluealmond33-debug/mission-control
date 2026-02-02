@@ -78,6 +78,107 @@
             color: var(--text-primary);
         }
 
+        /* Influencer Dashboard */
+        .influencer-dashboard {
+            padding: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .inf-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .inf-stat-card {
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        .inf-stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-purple);
+        }
+        .inf-stat-label {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            margin-top: 0.25rem;
+        }
+        .inf-section {
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .inf-section h3 {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        .inf-cat-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        .inf-cat-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            background: var(--bg-card);
+            font-size: 0.85rem;
+            color: var(--text-primary);
+        }
+        .inf-cat-count {
+            background: var(--accent-purple);
+            color: white;
+            font-size: 0.7rem;
+            padding: 0.1rem 0.5rem;
+            border-radius: 10px;
+            font-weight: 600;
+        }
+        .inf-progress-bar {
+            width: 100%;
+            height: 8px;
+            background: var(--bg-card);
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 0.5rem;
+        }
+        .inf-progress-fill {
+            height: 100%;
+            border-radius: 4px;
+            transition: width 0.5s ease;
+        }
+        .inf-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .inf-table th {
+            text-align: left;
+            padding: 0.75rem;
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--border);
+        }
+        .inf-table td {
+            padding: 0.75rem;
+            font-size: 0.9rem;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .inf-platform-badge {
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        .inf-platform-badge.telegram { background: #229ED9; color: white; }
+        .inf-platform-badge.youtube { background: #FF0000; color: white; }
+
         .header-right {
             display: flex;
             align-items: center;
@@ -2165,6 +2266,7 @@
                 <div class="nav-tab active" data-view="tasks" onclick="switchView('tasks')">Tasks</div>
                 <div class="nav-tab" data-view="docs" onclick="switchView('docs')">Docs</div>
                 <div class="nav-tab" data-view="people" onclick="switchView('people')">People</div>
+                <div class="nav-tab" data-view="influencers" onclick="switchView('influencers')">Influencers</div>
             </nav>
             
             <!-- Search -->
@@ -2520,6 +2622,90 @@
             </div>
         </div>
     </div><!-- END view-people -->
+
+    <!-- INFLUENCERS VIEW -->
+    <div id="view-influencers" class="view" style="display: none;">
+        <div class="influencer-dashboard">
+            <h2 style="margin-bottom: 1.5rem;">📡 인플루언서 추적 현황</h2>
+
+            <div class="inf-stats-grid" id="inf-stats-grid">
+                <div class="inf-stat-card">
+                    <div class="inf-stat-value" id="inf-total">255</div>
+                    <div class="inf-stat-label">전체 채널</div>
+                </div>
+                <div class="inf-stat-card">
+                    <div class="inf-stat-value" style="color: #229ED9;" id="inf-telegram">206</div>
+                    <div class="inf-stat-label">텔레그램</div>
+                </div>
+                <div class="inf-stat-card">
+                    <div class="inf-stat-value" style="color: #FF0000;" id="inf-youtube">49</div>
+                    <div class="inf-stat-label">유튜브</div>
+                </div>
+                <div class="inf-stat-card">
+                    <div class="inf-stat-value" style="color: var(--accent-green);" id="inf-url-rate">79%</div>
+                    <div class="inf-stat-label">URL 수집률</div>
+                </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                <div class="inf-section">
+                    <h3>📨 텔레그램 URL 수집</h3>
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                        <span style="color: var(--text-secondary);" id="inf-tg-progress-text">202 / 206 수집 완료</span>
+                        <span style="font-weight: 600; color: var(--accent-green);" id="inf-tg-pct">98%</span>
+                    </div>
+                    <div class="inf-progress-bar">
+                        <div class="inf-progress-fill" id="inf-tg-bar" style="width: 98%; background: var(--accent-green);"></div>
+                    </div>
+
+                    <h3 style="margin-top: 1.5rem;">🎬 유튜브 URL 수집</h3>
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                        <span style="color: var(--text-secondary);" id="inf-yt-progress-text">0 / 49 수집 완료</span>
+                        <span style="font-weight: 600; color: var(--accent-red);" id="inf-yt-pct">0%</span>
+                    </div>
+                    <div class="inf-progress-bar">
+                        <div class="inf-progress-fill" id="inf-yt-bar" style="width: 0%; background: var(--accent-red);"></div>
+                    </div>
+                </div>
+
+                <div class="inf-section">
+                    <h3>📂 카테고리 분포 (텔레그램)</h3>
+                    <div class="inf-cat-grid" id="inf-tg-categories">
+                    </div>
+                </div>
+            </div>
+
+            <div class="inf-section">
+                <h3>📂 카테고리 분포 (유튜브)</h3>
+                <div class="inf-cat-grid" id="inf-yt-categories">
+                </div>
+            </div>
+
+            <div class="inf-section">
+                <h3>📋 인플루언서 목록</h3>
+                <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
+                    <button class="btn btn-small" style="background: var(--bg-card); color: var(--text-primary); border: 1px solid var(--border);" onclick="filterInfluencers('all')" id="inf-filter-all">전체</button>
+                    <button class="btn btn-small" style="background: transparent; color: var(--text-secondary); border: 1px solid var(--border);" onclick="filterInfluencers('telegram')" id="inf-filter-telegram">📨 텔레그램</button>
+                    <button class="btn btn-small" style="background: transparent; color: var(--text-secondary); border: 1px solid var(--border);" onclick="filterInfluencers('youtube')" id="inf-filter-youtube">🎬 유튜브</button>
+                    <input type="text" placeholder="이름 검색..." style="background: var(--bg-card); color: var(--text-primary); border: 1px solid var(--border); border-radius: 6px; padding: 0.4rem 0.8rem; font-size: 0.85rem; flex: 1; max-width: 250px;" id="inf-search" oninput="filterInfluencerSearch()">
+                </div>
+                <div style="max-height: 500px; overflow-y: auto;">
+                    <table class="inf-table">
+                        <thead>
+                            <tr>
+                                <th>이름</th>
+                                <th>플랫폼</th>
+                                <th>카테고리</th>
+                                <th>URL</th>
+                            </tr>
+                        </thead>
+                        <tbody id="inf-table-body">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div><!-- END view-influencers -->
 
     <!-- Auth Modal -->
     <div class="modal-overlay" id="auth-modal" onclick="if(event.target===this)hideAuthModal()">
@@ -6729,14 +6915,145 @@
             }
         }
 
-        // Extend switchView to load collaborators when People tab is selected
+        // Extend switchView to load collaborators/influencers when tabs selected
         const originalSwitchView = switchView;
         switchView = function(viewName) {
             originalSwitchView(viewName);
             if (viewName === 'people') {
                 loadCollaborators();
             }
+            if (viewName === 'influencers') {
+                loadInfluencerData();
+            }
         };
+
+        // === INFLUENCER TRACKING ===
+        let INFLUENCER_DATA = null;
+        let INFLUENCER_FILTER = 'all';
+
+        async function loadInfluencerData() {
+            if (INFLUENCER_DATA) {
+                renderInfluencerDashboard();
+                return;
+            }
+            try {
+                const token = STATE.token || localStorage.getItem('gh_token');
+                const response = await fetch(
+                    `https://api.github.com/repos/${CONFIG.owner}/${CONFIG.repo}/contents/data/influencers.json`,
+                    { headers: { 'Authorization': `token ${token}` } }
+                );
+                if (response.ok) {
+                    const data = await response.json();
+                    INFLUENCER_DATA = JSON.parse(decodeURIComponent(escape(atob(data.content))));
+                    renderInfluencerDashboard();
+                } else {
+                    document.getElementById('inf-table-body').innerHTML = '<tr><td colspan="4" style="text-align:center;color:var(--text-secondary);">데이터를 불러올 수 없습니다. GitHub에 로그인하세요.</td></tr>';
+                }
+            } catch (e) {
+                console.error('Error loading influencer data:', e);
+            }
+        }
+
+        function renderInfluencerDashboard() {
+            if (!INFLUENCER_DATA) return;
+            const s = INFLUENCER_DATA.summary;
+
+            // Stats
+            document.getElementById('inf-total').textContent = s.telegram.total + s.youtube.total;
+            document.getElementById('inf-telegram').textContent = s.telegram.total;
+            document.getElementById('inf-youtube').textContent = s.youtube.total;
+            const totalUrl = s.telegram.withUrl + s.youtube.withUrl;
+            const totalAll = s.telegram.total + s.youtube.total;
+            document.getElementById('inf-url-rate').textContent = Math.round(totalUrl / totalAll * 100) + '%';
+
+            // Telegram progress
+            const tgPct = Math.round(s.telegram.withUrl / s.telegram.total * 100);
+            document.getElementById('inf-tg-progress-text').textContent = `${s.telegram.withUrl} / ${s.telegram.total} 수집 완료`;
+            document.getElementById('inf-tg-pct').textContent = tgPct + '%';
+            document.getElementById('inf-tg-bar').style.width = tgPct + '%';
+            document.getElementById('inf-tg-pct').style.color = tgPct > 80 ? 'var(--accent-green)' : 'var(--accent-yellow)';
+            document.getElementById('inf-tg-bar').style.background = tgPct > 80 ? 'var(--accent-green)' : 'var(--accent-yellow)';
+
+            // YouTube progress
+            const ytPct = s.youtube.total > 0 ? Math.round(s.youtube.withUrl / s.youtube.total * 100) : 0;
+            document.getElementById('inf-yt-progress-text').textContent = `${s.youtube.withUrl} / ${s.youtube.total} 수집 완료`;
+            document.getElementById('inf-yt-pct').textContent = ytPct + '%';
+            document.getElementById('inf-yt-bar').style.width = ytPct + '%';
+
+            // Categories
+            renderCategories('inf-tg-categories', s.telegram.categories, '#229ED9');
+            renderCategories('inf-yt-categories', s.youtube.categories, '#FF0000');
+
+            // Table
+            renderInfluencerTable();
+        }
+
+        function renderCategories(containerId, cats, accentColor) {
+            const el = document.getElementById(containerId);
+            const sorted = Object.entries(cats).sort((a,b) => b[1] - a[1]);
+            el.innerHTML = sorted.map(([cat, count]) => 
+                `<span class="inf-cat-tag">${cat} <span class="inf-cat-count" style="background:${accentColor}">${count}</span></span>`
+            ).join('');
+        }
+
+        function renderInfluencerTable() {
+            if (!INFLUENCER_DATA) return;
+            const s = INFLUENCER_DATA.summary;
+            const search = (document.getElementById('inf-search')?.value || '').toLowerCase();
+            
+            // Build combined list from summary categories (we don't have full list in summary)
+            // Use the samples + category counts for display
+            let rows = [];
+            
+            // Generate rows from category data
+            if (INFLUENCER_FILTER === 'all' || INFLUENCER_FILTER === 'telegram') {
+                Object.entries(s.telegram.categories).forEach(([cat, count]) => {
+                    if (!search || cat.toLowerCase().includes(search)) {
+                        rows.push({ platform: 'telegram', category: cat, count: count, urlCount: Math.round(count * s.telegram.withUrl / s.telegram.total) });
+                    }
+                });
+            }
+            if (INFLUENCER_FILTER === 'all' || INFLUENCER_FILTER === 'youtube') {
+                Object.entries(s.youtube.categories).forEach(([cat, count]) => {
+                    if (!search || cat.toLowerCase().includes(search)) {
+                        rows.push({ platform: 'youtube', category: cat, count: count, urlCount: Math.round(count * s.youtube.withUrl / s.youtube.total) });
+                    }
+                });
+            }
+
+            rows.sort((a,b) => b.count - a.count);
+
+            const tbody = document.getElementById('inf-table-body');
+            if (rows.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="4" style="text-align:center;color:var(--text-secondary);">결과 없음</td></tr>';
+                return;
+            }
+
+            tbody.innerHTML = rows.map(r => `
+                <tr>
+                    <td style="font-weight:500;">${r.category}</td>
+                    <td><span class="inf-platform-badge ${r.platform}">${r.platform === 'telegram' ? '📨 Telegram' : '🎬 YouTube'}</span></td>
+                    <td>${r.count}명</td>
+                    <td>${r.urlCount}/${r.count} 수집 (${Math.round(r.urlCount/r.count*100)}%)</td>
+                </tr>
+            `).join('');
+        }
+
+        function filterInfluencers(platform) {
+            INFLUENCER_FILTER = platform;
+            ['all','telegram','youtube'].forEach(p => {
+                const btn = document.getElementById('inf-filter-' + p);
+                if (btn) {
+                    btn.style.background = p === platform ? 'var(--bg-card)' : 'transparent';
+                    btn.style.color = p === platform ? 'var(--text-primary)' : 'var(--text-secondary)';
+                }
+            });
+            renderInfluencerTable();
+        }
+
+        function filterInfluencerSearch() {
+            renderInfluencerTable();
+        }
 
         // === INIT ===
         document.addEventListener('DOMContentLoaded', async () => {

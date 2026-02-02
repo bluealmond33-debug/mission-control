@@ -1,0 +1,103 @@
+{
+  "summary": {
+    "telegram": {
+      "total": 206,
+      "withUrl": 202,
+      "categories": {
+        "일반": 96,
+        "바이오": 15,
+        "매크로": 9,
+        "게임": 4,
+        "미국주식": 9,
+        "부동산": 10,
+        "리서치": 19,
+        "AI": 2,
+        "반도체": 17,
+        "유통": 5,
+        "채권": 3,
+        "지역": 2,
+        "ETF": 4,
+        "자동차": 6,
+        "화학": 4,
+        "거버넌스": 1
+      }
+    },
+    "youtube": {
+      "total": 49,
+      "withUrl": 0,
+      "categories": {
+        "일반": 38,
+        "미국주식": 4,
+        "리서치": 2,
+        "AI": 1,
+        "자동차": 1,
+        "매크로": 1,
+        "반도체": 1,
+        "unknown": 1
+      }
+    }
+  },
+  "samples": [
+    {
+      "name": "상주의 투자 인생 업그레이드노트",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/insangnism"
+    },
+    {
+      "name": "대체투자 인사이드",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/jsinside"
+    },
+    {
+      "name": "인포마켓 infomarket",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/infomarketopen"
+    },
+    {
+      "name": "한경바이오 인사이트",
+      "platform": "telegram",
+      "category": "바이오",
+      "url": "https://t.me/hkbioinsight"
+    },
+    {
+      "name": "회색 인간의 매크로 + 투자",
+      "platform": "telegram",
+      "category": "매크로",
+      "url": "https://t.me/mistergray_11"
+    },
+    {
+      "name": "전종현의 인사이트",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/chunjonghyun"
+    },
+    {
+      "name": "[인베스퀴즈]",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/invesqz"
+    },
+    {
+      "name": "DS 인터넷/게임 최승호",
+      "platform": "telegram",
+      "category": "게임",
+      "url": "https://t.me/ssi_game"
+    },
+    {
+      "name": "힙한 펭미업의 1인칭 시점",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/pengmeup"
+    },
+    {
+      "name": "US Stocks Insider 🇺🇸 (미국 주식 인사이더)",
+      "platform": "telegram",
+      "category": "미국주식",
+      "url": "https://t.me/insidertracking"
+    }
+  ],
+  "lastUpdated": "2026-02-02"
+}
