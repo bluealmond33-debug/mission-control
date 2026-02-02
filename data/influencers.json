@@ -37,67 +37,1792 @@
       }
     }
   },
-  "samples": [
+  "influencers": [
     {
       "name": "상주의 투자 인생 업그레이드노트",
       "platform": "telegram",
       "category": "일반",
-      "url": "https://t.me/insangnism"
+      "url": "https://t.me/insangnism",
+      "sourceUrl": null
     },
     {
       "name": "대체투자 인사이드",
       "platform": "telegram",
       "category": "일반",
-      "url": "https://t.me/jsinside"
+      "url": "https://t.me/jsinside",
+      "sourceUrl": null
     },
     {
       "name": "인포마켓 infomarket",
       "platform": "telegram",
       "category": "일반",
-      "url": "https://t.me/infomarketopen"
+      "url": "https://t.me/infomarketopen",
+      "sourceUrl": null
     },
     {
       "name": "한경바이오 인사이트",
       "platform": "telegram",
       "category": "바이오",
-      "url": "https://t.me/hkbioinsight"
+      "url": "https://t.me/hkbioinsight",
+      "sourceUrl": null
     },
     {
       "name": "회색 인간의 매크로 + 투자",
       "platform": "telegram",
       "category": "매크로",
-      "url": "https://t.me/mistergray_11"
+      "url": "https://t.me/mistergray_11",
+      "sourceUrl": null
     },
     {
       "name": "전종현의 인사이트",
       "platform": "telegram",
       "category": "일반",
-      "url": "https://t.me/chunjonghyun"
+      "url": "https://t.me/chunjonghyun",
+      "sourceUrl": null
     },
     {
       "name": "[인베스퀴즈]",
       "platform": "telegram",
       "category": "일반",
-      "url": "https://t.me/invesqz"
+      "url": "https://t.me/invesqz",
+      "sourceUrl": null
     },
     {
       "name": "DS 인터넷/게임 최승호",
       "platform": "telegram",
       "category": "게임",
-      "url": "https://t.me/ssi_game"
+      "url": "https://t.me/ssi_game",
+      "sourceUrl": null
     },
     {
       "name": "힙한 펭미업의 1인칭 시점",
       "platform": "telegram",
       "category": "일반",
-      "url": "https://t.me/pengmeup"
+      "url": "https://t.me/pengmeup",
+      "sourceUrl": null
     },
     {
       "name": "US Stocks Insider 🇺🇸 (미국 주식 인사이더)",
       "platform": "telegram",
       "category": "미국주식",
-      "url": "https://t.me/insidertracking"
+      "url": "https://t.me/insidertracking",
+      "sourceUrl": null
+    },
+    {
+      "name": "[미래 임희석] 인터넷/게임 아카이브",
+      "platform": "telegram",
+      "category": "게임",
+      "url": "https://t.me/mirae_internet",
+      "sourceUrl": null
+    },
+    {
+      "name": "[신한 리서치본부] 인터넷/게임",
+      "platform": "telegram",
+      "category": "게임",
+      "url": "https://t.me/seokokang",
+      "sourceUrl": null
+    },
+    {
+      "name": "상상인 철강/건설 김진범",
+      "platform": "telegram",
+      "category": "부동산",
+      "url": "https://t.me/PipeBeom",
+      "sourceUrl": null
+    },
+    {
+      "name": "대신증권 이지은의 인터넷/게임",
+      "platform": "telegram",
+      "category": "게임",
+      "url": "https://t.me/GamestockEasy",
+      "sourceUrl": null
+    },
+    {
+      "name": "전문가들의 마켓 (인)사이트",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/getfeed",
+      "sourceUrl": null
+    },
+    {
+      "name": "[한화 임해인] 미국주식/자산배분",
+      "platform": "telegram",
+      "category": "미국주식",
+      "url": "https://t.me/haeinlim1",
+      "sourceUrl": null
+    },
+    {
+      "name": "KB시황 하인환",
+      "platform": "telegram",
+      "category": "매크로",
+      "url": "https://t.me/Inhwan_Ha",
+      "sourceUrl": null
+    },
+    {
+      "name": "독립리서치 밸류파인더",
+      "platform": "telegram",
+      "category": "리서치",
+      "url": "https://t.me/valuefinder",
+      "sourceUrl": null
+    },
+    {
+      "name": "곤조투자가 개인아카이브:일기장",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/twozaga",
+      "sourceUrl": null
+    },
+    {
+      "name": "신영증권/법인영업 해외주식 Inside",
+      "platform": "telegram",
+      "category": "미국주식",
+      "url": "https://t.me/shinyoungglobal",
+      "sourceUrl": null
+    },
+    {
+      "name": "오를 주식(GoUp)📈 - 뉴스/정보/주식/경제/정치/코인",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/GoUpstock",
+      "sourceUrl": null
+    },
+    {
+      "name": "알테오젠 IR",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/alteogenIR",
+      "sourceUrl": null
+    },
+    {
+      "name": "기억나는공간",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/yunwonjae",
+      "sourceUrl": null
+    },
+    {
+      "name": "머니스토리 (Stock & Investment)",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/stockninvest",
+      "sourceUrl": null
+    },
+    {
+      "name": "KOREA DAILY INSIGHT - KIS GREG KIM",
+      "platform": "telegram",
+      "category": "AI",
+      "url": "https://t.me/KISGregKim",
+      "sourceUrl": null
+    },
+    {
+      "name": "[공식]🇰🇷이경준 혁신IB자산운용 대표의 화(話)💬",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/KoreaIB",
+      "sourceUrl": null
+    },
+    {
+      "name": "[한투증권 이동연] 글로벌 기업(IT S/W)",
+      "platform": "telegram",
+      "category": "반도체",
+      "url": "https://t.me/chinaitev",
+      "sourceUrl": null
+    },
+    {
+      "name": "한화 Research 금융 김도하",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/dh_finance",
+      "sourceUrl": null
+    },
+    {
+      "name": "허혜민의 제약/바이오 소식통",
+      "platform": "telegram",
+      "category": "바이오",
+      "url": "https://t.me/huhpharm",
+      "sourceUrl": null
+    },
+    {
+      "name": "KCGI한양증권 제약/바이오 오병용",
+      "platform": "telegram",
+      "category": "바이오",
+      "url": "https://t.me/bdragon0808",
+      "sourceUrl": null
+    },
+    {
+      "name": "[한투증권 김명주] 유통/화장품",
+      "platform": "telegram",
+      "category": "유통",
+      "url": "https://t.me/kmj_retailcosmetics",
+      "sourceUrl": null
+    },
+    {
+      "name": "노랑오리 재테크 텔레그램",
+      "platform": "telegram",
+      "category": "반도체",
+      "url": "https://t.me/yellowducktele",
+      "sourceUrl": null
+    },
+    {
+      "name": "서초동 투자머신",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/twomachine",
+      "sourceUrl": null
+    },
+    {
+      "name": "요약하는 고잉",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/one_going",
+      "sourceUrl": null
+    },
+    {
+      "name": "[LS증권 채권] 우혜영",
+      "platform": "telegram",
+      "category": "채권",
+      "url": "https://t.me/LS_WooBond",
+      "sourceUrl": null
+    },
+    {
+      "name": "KB증권 / 건설 / 장문준",
+      "platform": "telegram",
+      "category": "부동산",
+      "url": "https://t.me/KB_EPC_MJ",
+      "sourceUrl": null
+    },
+    {
+      "name": "YM리서치",
+      "platform": "telegram",
+      "category": "리서치",
+      "url": "https://t.me/ym_research",
+      "sourceUrl": null
+    },
+    {
+      "name": "[메리츠 중국 최설화]",
+      "platform": "telegram",
+      "category": "부동산",
+      "url": "https://t.me/china_kis",
+      "sourceUrl": null
+    },
+    {
+      "name": "[유안타/이안나] 2차전지/신에너지",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/anna7673",
+      "sourceUrl": null
+    },
+    {
+      "name": "바이오만 판다 🐼",
+      "platform": "telegram",
+      "category": "바이오",
+      "url": "https://t.me/kkk595959",
+      "sourceUrl": null
+    },
+    {
+      "name": "헨리의 노트(Building Pipelines)",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/GreatestOfAllTimes",
+      "sourceUrl": null
+    },
+    {
+      "name": "[삼성/이창희] 일본주식/비상장",
+      "platform": "telegram",
+      "category": "지역",
+      "url": "https://t.me/samsungpe",
+      "sourceUrl": null
+    },
+    {
+      "name": "엄브렐라리서치 Jay의 주식투자교실",
+      "platform": "telegram",
+      "category": "리서치",
+      "url": "https://t.me/Jstockclass",
+      "sourceUrl": null
+    },
+    {
+      "name": "[한투증권 채민숙] 반도체",
+      "platform": "telegram",
+      "category": "반도체",
+      "url": "https://t.me/KISemicon",
+      "sourceUrl": null
+    },
+    {
+      "name": "급등일보 미국주식🇺🇸기술주/성장주 투자아이디어 발굴",
+      "platform": "telegram",
+      "category": "미국주식",
+      "url": "https://t.me/FastStockNewsUSA",
+      "sourceUrl": null
+    },
+    {
+      "name": "재간둥이 송선생의 링크수집 창고",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/songjongsik",
+      "sourceUrl": null
+    },
+    {
+      "name": "Yeouido Lab_여의도 톺아보기",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/Yeouido_Lab",
+      "sourceUrl": null
+    },
+    {
+      "name": "최선생네 반지하",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/guroguru",
+      "sourceUrl": null
+    },
+    {
+      "name": "한국투자 중국/신흥국 정정영",
+      "platform": "telegram",
+      "category": "지역",
+      "url": "https://t.me/EMchina",
+      "sourceUrl": null
+    },
+    {
+      "name": "시장 이야기 by 제이슨",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/bumgore",
+      "sourceUrl": null
+    },
+    {
+      "name": "유진투자증권 ETF/파생 강송철",
+      "platform": "telegram",
+      "category": "ETF",
+      "url": "https://t.me/buykkang",
+      "sourceUrl": null
+    },
+    {
+      "name": "Hodolry의 텔레그램",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/hodolrytv",
+      "sourceUrl": null
+    },
+    {
+      "name": "MZ타뇽 긴축모드 ON",
+      "platform": "telegram",
+      "category": "매크로",
+      "url": "https://t.me/mzgeneration",
+      "sourceUrl": null
+    },
+    {
+      "name": "바이바이바이오🤡DS 제약/바이오 김민정",
+      "platform": "telegram",
+      "category": "바이오",
+      "url": "https://t.me/mnJeong_BIO",
+      "sourceUrl": null
+    },
+    {
+      "name": "[삼성 Mobility 임은영]",
+      "platform": "telegram",
+      "category": "자동차",
+      "url": "https://t.me/s_esthermobility",
+      "sourceUrl": null
+    },
+    {
+      "name": "야자반 - 주식공부",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/yaza_stock",
+      "sourceUrl": null
+    },
+    {
+      "name": "DAOL 조선/기계/방산 | 최광식",
+      "platform": "telegram",
+      "category": "부동산",
+      "url": "https://t.me/HI_GS",
+      "sourceUrl": null
+    },
+    {
+      "name": "잠실개미&10X's N.E.R.D.S",
+      "platform": "telegram",
+      "category": "일반",
+      "url": null,
+      "sourceUrl": null
+    },
+    {
+      "name": "[한국투자 최고운] 운송",
+      "platform": "telegram",
+      "category": "자동차",
+      "url": "https://t.me/thetransport",
+      "sourceUrl": null
+    },
+    {
+      "name": "메리츠 에너지/건설 문경원",
+      "platform": "telegram",
+      "category": "부동산",
+      "url": "https://t.me/meritzmoon",
+      "sourceUrl": null
+    },
+    {
+      "name": "[주식] 증권사 리포트",
+      "platform": "telegram",
+      "category": "리서치",
+      "url": "https://t.me/companyreport",
+      "sourceUrl": null
+    },
+    {
+      "name": "현대차증권 철강/비철금속",
+      "platform": "telegram",
+      "category": "부동산",
+      "url": "https://t.me/hyundaiindustirial",
+      "sourceUrl": null
+    },
+    {
+      "name": "[하나 채권 김상훈] 후니본(Bond)",
+      "platform": "telegram",
+      "category": "채권",
+      "url": "https://t.me/hanabondview",
+      "sourceUrl": null
+    },
+    {
+      "name": "엄브렐라 Charles의 Pre&Post IPO",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/charles_IPO",
+      "sourceUrl": null
+    },
+    {
+      "name": "[메리츠 Macro 이승훈/FX 박수연]",
+      "platform": "telegram",
+      "category": "매크로",
+      "url": "https://t.me/stephenlee_meritz",
+      "sourceUrl": null
+    },
+    {
+      "name": "늘- 봄처럼 따뜻한 투자 이야기",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/NeulBom",
+      "sourceUrl": null
+    },
+    {
+      "name": "한투 제약/바이오 위해주",
+      "platform": "telegram",
+      "category": "바이오",
+      "url": "https://t.me/KIS_Healthcare",
+      "sourceUrl": null
+    },
+    {
+      "name": "해투의 \"난 딴돈의 반만 가져가\"",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/haetwo",
+      "sourceUrl": null
+    },
+    {
+      "name": "💯똥밭에 굴러도 주식판",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/daegurr",
+      "sourceUrl": null
+    },
+    {
+      "name": "FS리서치",
+      "platform": "telegram",
+      "category": "리서치",
+      "url": "https://t.me/FSResearch",
+      "sourceUrl": null
+    },
+    {
+      "name": "Rich Guys - 투기와 선동의 민족",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/Rich_Guys01",
+      "sourceUrl": null
+    },
+    {
+      "name": "메리츠 김준성, Mobility War",
+      "platform": "telegram",
+      "category": "자동차",
+      "url": "https://t.me/joonsungkim",
+      "sourceUrl": null
+    },
+    {
+      "name": "하나 IT 김록호,김현수,김민경",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/ITforYouFromHana",
+      "sourceUrl": null
+    },
+    {
+      "name": "제약/바이오/미용 원리버 Oneriver",
+      "platform": "telegram",
+      "category": "바이오",
+      "url": "https://t.me/pharmbiohana",
+      "sourceUrl": null
+    },
+    {
+      "name": "LS증권/글로벌주식영업팀",
+      "platform": "telegram",
+      "category": "리서치",
+      "url": "https://t.me/globalequity1",
+      "sourceUrl": null
+    },
+    {
+      "name": "PL",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/s/pillip_to_rich",
+      "sourceUrl": null
+    },
+    {
+      "name": "The Finance Journal",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/TheFinanceJournal",
+      "sourceUrl": null
+    },
+    {
+      "name": "[DAOL퀀트 김경훈] 탑다운 전략",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/purequant",
+      "sourceUrl": null
+    },
+    {
+      "name": "[하나 Global ETF] 박승진",
+      "platform": "telegram",
+      "category": "ETF",
+      "url": "https://t.me/globaletfi",
+      "sourceUrl": null
+    },
+    {
+      "name": "- SMART한 주식투자-",
+      "platform": "telegram",
+      "category": "일반",
+      "url": null,
+      "sourceUrl": null
+    },
+    {
+      "name": "리써처TV 바이오 Insight",
+      "platform": "telegram",
+      "category": "바이오",
+      "url": "https://t.me/researchertv",
+      "sourceUrl": null
+    },
+    {
+      "name": "부의 나침반",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/w_compass",
+      "sourceUrl": null
+    },
+    {
+      "name": "유안타 News 라운지",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/tRadarnewsdesk",
+      "sourceUrl": null
+    },
+    {
+      "name": "취미생활방📮",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/enjoymyhobby",
+      "sourceUrl": null
+    },
+    {
+      "name": "키움증권 해외선물 톡톡",
+      "platform": "telegram",
+      "category": "미국주식",
+      "url": "https://t.me/kwtok",
+      "sourceUrl": null
+    },
+    {
+      "name": "타점 읽어주는 여자(타자)",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/tazastock",
+      "sourceUrl": null
+    },
+    {
+      "name": "하나증권/에너지화학/윤재성",
+      "platform": "telegram",
+      "category": "화학",
+      "url": "https://t.me/energy_youn",
+      "sourceUrl": null
+    },
+    {
+      "name": "The Barbarian 해외주식",
+      "platform": "telegram",
+      "category": "미국주식",
+      "url": "https://t.me/Barbarianglobal",
+      "sourceUrl": null
+    },
+    {
+      "name": "[메리츠 Tech 김선우, 양승수, 김동관]",
+      "platform": "telegram",
+      "category": "반도체",
+      "url": "https://t.me/merITz_tech",
+      "sourceUrl": null
+    },
+    {
+      "name": "[삼성/김영호] 운송/유틸리티",
+      "platform": "telegram",
+      "category": "자동차",
+      "url": "https://t.me/ss_transportation",
+      "sourceUrl": null
+    },
+    {
+      "name": "강남주꾸미(주식으로꿈꾸는미래)",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/fivestock",
+      "sourceUrl": null
+    },
+    {
+      "name": "미국주식과 투자이야기",
+      "platform": "telegram",
+      "category": "미국주식",
+      "url": "https://t.me/itechkorea",
+      "sourceUrl": null
+    },
+    {
+      "name": "이차장 Live",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/leechajang1",
+      "sourceUrl": null
+    },
+    {
+      "name": "한화투자증권 유통/의류 이진협",
+      "platform": "telegram",
+      "category": "유통",
+      "url": "https://t.me/jinhyeoblee",
+      "sourceUrl": null
+    },
+    {
+      "name": "BioMoment-Oncology",
+      "platform": "telegram",
+      "category": "바이오",
+      "url": "https://t.me/biomoment",
+      "sourceUrl": null
+    },
+    {
+      "name": "DS투자증권 리서치",
+      "platform": "telegram",
+      "category": "리서치",
+      "url": "https://t.me/DSInvResearch",
+      "sourceUrl": null
+    },
+    {
+      "name": "Fund Easy",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/fundeasy_choi",
+      "sourceUrl": null
+    },
+    {
+      "name": "LS 유통/화장품 오린아",
+      "platform": "telegram",
+      "category": "유통",
+      "url": "https://t.me/thisisoritel",
+      "sourceUrl": null
+    },
+    {
+      "name": "[삼성리서치] 테크는 역시 삼성증권",
+      "platform": "telegram",
+      "category": "반도체",
+      "url": "https://t.me/jw_tech",
+      "sourceUrl": null
+    },
+    {
+      "name": "投資, 아레테",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/mstaryun",
+      "sourceUrl": null
+    },
+    {
+      "name": "강해령의 반도체탐구생활",
+      "platform": "telegram",
+      "category": "반도체",
+      "url": "https://t.me/bandocheEXPgo",
+      "sourceUrl": null
+    },
+    {
+      "name": "매시 트레이딩 - 매크로, 시황으로 드리블",
+      "platform": "telegram",
+      "category": "매크로",
+      "url": "https://t.me/massitrading",
+      "sourceUrl": null
+    },
+    {
+      "name": "미국 제약-바이오 주식/약장수",
+      "platform": "telegram",
+      "category": "바이오",
+      "url": "https://t.me/yakjangsu",
+      "sourceUrl": null
+    },
+    {
+      "name": "미래에셋 제약/바이오 김승민",
+      "platform": "telegram",
+      "category": "바이오",
+      "url": "https://t.me/bioksm",
+      "sourceUrl": null
+    },
+    {
+      "name": "바이오스펙테이터",
+      "platform": "telegram",
+      "category": "바이오",
+      "url": "https://t.me/biospectatorT",
+      "sourceUrl": null
+    },
+    {
+      "name": "선진짱 주식공부방",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/sunstudy1004",
+      "sourceUrl": null
+    },
+    {
+      "name": "장문수의 HMC Auto Call",
+      "platform": "telegram",
+      "category": "자동차",
+      "url": "https://t.me/auto_call",
+      "sourceUrl": null
+    },
+    {
+      "name": "한화투자증권 경제 임혜윤",
+      "platform": "telegram",
+      "category": "리서치",
+      "url": "https://t.me/lim_econ",
+      "sourceUrl": null
+    },
+    {
+      "name": "Apple News",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/iphone",
+      "sourceUrl": null
+    },
+    {
+      "name": "LS증권 반도체/소부장 차용호",
+      "platform": "telegram",
+      "category": "반도체",
+      "url": "https://t.me/LSsecTech",
+      "sourceUrl": null
+    },
+    {
+      "name": "SK증권 리서치 자산전략팀",
+      "platform": "telegram",
+      "category": "리서치",
+      "url": "https://t.me/SK_Research_Asset",
+      "sourceUrl": null
+    },
+    {
+      "name": "SOL ETF 박수민",
+      "platform": "telegram",
+      "category": "ETF",
+      "url": "https://t.me/soletf",
+      "sourceUrl": null
+    },
+    {
+      "name": "[메리츠 커뮤니케이션 정지수, 김민영]",
+      "platform": "telegram",
+      "category": "부동산",
+      "url": "https://t.me/meritztelco",
+      "sourceUrl": null
+    },
+    {
+      "name": "[키움 전기전자/디스플레이 김소원]",
+      "platform": "telegram",
+      "category": "반도체",
+      "url": "https://t.me/kiwoomdisplay",
+      "sourceUrl": null
+    },
+    {
+      "name": "건설/조선/리츠 | 강경태 | 한국투자증권",
+      "platform": "telegram",
+      "category": "부동산",
+      "url": "https://t.me/enc210406",
+      "sourceUrl": null
+    },
+    {
+      "name": "교보증권 리서치센터",
+      "platform": "telegram",
+      "category": "리서치",
+      "url": "https://t.me/KyoboRSC",
+      "sourceUrl": null
+    },
+    {
+      "name": "돼지바",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/bbong_tta",
+      "sourceUrl": null
+    },
+    {
+      "name": "드리머의 잃지 않는 투자",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/orangeboard",
+      "sourceUrl": null
+    },
+    {
+      "name": "떡상떡상 말랑카우",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/tteoksangMalangCow",
+      "sourceUrl": null
+    },
+    {
+      "name": "밸류아이알(Value IR) 채널",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/valueir",
+      "sourceUrl": null
+    },
+    {
+      "name": "신한 혁신성장파트",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/shsmallcap",
+      "sourceUrl": null
+    },
+    {
+      "name": "요가하는증권맨",
+      "platform": "telegram",
+      "category": "리서치",
+      "url": "https://t.me/yogahsd",
+      "sourceUrl": null
+    },
+    {
+      "name": "척준 경제채널",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/econoChuck",
+      "sourceUrl": null
+    },
+    {
+      "name": "탐방봇",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/TambangVot",
+      "sourceUrl": null
+    },
+    {
+      "name": "피카츄 아저씨⚡️",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/pikachu_aje",
+      "sourceUrl": null
+    },
+    {
+      "name": "한국투자증권/기관영업부/이민근",
+      "platform": "telegram",
+      "category": "리서치",
+      "url": "https://t.me/mk81_koreainvestment",
+      "sourceUrl": null
+    },
+    {
+      "name": "AI Post — Artificial Intelligence",
+      "platform": "telegram",
+      "category": "AI",
+      "url": "https://t.me/aipost",
+      "sourceUrl": "https://t.me/aipost"
+    },
+    {
+      "name": "BI (Be Independent)",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/beindependent01",
+      "sourceUrl": null
+    },
+    {
+      "name": "Granit34의 투자스토리",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/Joorini34",
+      "sourceUrl": null
+    },
+    {
+      "name": "IT 하드웨어(반도체/디스플레이/부품)김운호",
+      "platform": "telegram",
+      "category": "반도체",
+      "url": "https://t.me/unokim88",
+      "sourceUrl": null
+    },
+    {
+      "name": "[삼성/조현렬] 정유/화학 Newsfeed",
+      "platform": "telegram",
+      "category": "화학",
+      "url": "https://t.me/samsungchem",
+      "sourceUrl": null
+    },
+    {
+      "name": "다올 의료기기/화장품 박종현",
+      "platform": "telegram",
+      "category": "바이오",
+      "url": "https://t.me/alexppark",
+      "sourceUrl": null
+    },
+    {
+      "name": "라온제나주식독법",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/goldmap7",
+      "sourceUrl": null
+    },
+    {
+      "name": "메리츠증권 이차전지/석유화학 노우호",
+      "platform": "telegram",
+      "category": "화학",
+      "url": "https://t.me/petrochem_wooho",
+      "sourceUrl": null
+    },
+    {
+      "name": "미니언즈",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/minionsstock",
+      "sourceUrl": null
+    },
+    {
+      "name": "유진 유통/화장품/의류 이해니",
+      "platform": "telegram",
+      "category": "유통",
+      "url": "https://t.me/hannylee93",
+      "sourceUrl": null
+    },
+    {
+      "name": "조기주식회 공부방",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/EarlyStock1",
+      "sourceUrl": null
+    },
+    {
+      "name": "주식소리통 NEO by Davidstockinfo",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/davidstocknew",
+      "sourceUrl": null
+    },
+    {
+      "name": "텐렙",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/Ten_level",
+      "sourceUrl": null
+    },
+    {
+      "name": "🇺🇸 미국주식 퍼스트콜(FirstCall)",
+      "platform": "telegram",
+      "category": "미국주식",
+      "url": "https://t.me/americastockfirstcall",
+      "sourceUrl": null
+    },
+    {
+      "name": "\"엄브렐라리서치-핀테크\" by Peter",
+      "platform": "telegram",
+      "category": "반도체",
+      "url": "https://t.me/platformfintech",
+      "sourceUrl": null
+    },
+    {
+      "name": "Act(선한 영향력) : 거버넌스, 물적분할, 행동주의, 소액주주 뉴스",
+      "platform": "telegram",
+      "category": "거버넌스",
+      "url": "https://t.me/governanceactivism",
+      "sourceUrl": null
+    },
+    {
+      "name": "HS아카데미 대표 이효석",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/HS_academy",
+      "sourceUrl": null
+    },
+    {
+      "name": "KB/화학/배터리 전우제",
+      "platform": "telegram",
+      "category": "화학",
+      "url": "https://t.me/wchun0222",
+      "sourceUrl": null
+    },
+    {
+      "name": "MIMI HALL",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/mimihall5",
+      "sourceUrl": null
+    },
+    {
+      "name": "Pluto Research",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/hedgehara",
+      "sourceUrl": null
+    },
+    {
+      "name": "[미래에셋 SW- 통신 김수진/장다현]",
+      "platform": "telegram",
+      "category": "반도체",
+      "url": "https://t.me/mdkimsoojin",
+      "sourceUrl": null
+    },
+    {
+      "name": "[하나증권 해외채권] 허성우",
+      "platform": "telegram",
+      "category": "미국주식",
+      "url": "https://t.me/deandatbond",
+      "sourceUrl": null
+    },
+    {
+      "name": "그로쓰리서치(Growth Research) [독립리서치]",
+      "platform": "telegram",
+      "category": "리서치",
+      "url": "https://t.me/growthresearch",
+      "sourceUrl": null
+    },
+    {
+      "name": "메리츠증권 리서치",
+      "platform": "telegram",
+      "category": "부동산",
+      "url": "https://t.me/meritz_research",
+      "sourceUrl": null
+    },
+    {
+      "name": "선수촌",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/athletes_village",
+      "sourceUrl": null
+    },
+    {
+      "name": "BK Tech Insight - 바바리안 리서치",
+      "platform": "telegram",
+      "category": "반도체",
+      "url": "https://t.me/Barbarian_Global_Tech",
+      "sourceUrl": null
+    },
+    {
+      "name": "Nittany ATOM Land",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/NittanyLionLand",
+      "sourceUrl": null
+    },
+    {
+      "name": "⚡️번개맞은뉴스 - 상위2% 주식텔레그램 채널",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/stock_messenger",
+      "sourceUrl": null
+    },
+    {
+      "name": "교보 제약/바이오 김정현",
+      "platform": "telegram",
+      "category": "바이오",
+      "url": "https://t.me/kyobo_chem",
+      "sourceUrl": null
+    },
+    {
+      "name": "DAOL 자동차 유지웅",
+      "platform": "telegram",
+      "category": "자동차",
+      "url": "https://t.me/auto_revolution",
+      "sourceUrl": null
+    },
+    {
+      "name": "KAYA",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/Epiphanyinvest",
+      "sourceUrl": null
+    },
+    {
+      "name": "나름의 아이디어 공유",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/nareumidea",
+      "sourceUrl": null
+    },
+    {
+      "name": "Rafiki research",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/rafikiresearch",
+      "sourceUrl": null
+    },
+    {
+      "name": "[Macro Trend Hyott] 시황&차트",
+      "platform": "telegram",
+      "category": "매크로",
+      "url": "https://t.me/hyottchart",
+      "sourceUrl": null
+    },
+    {
+      "name": "[노다지IR노트] 컨콜/탐방/주담통화",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/irnote_ystreet",
+      "sourceUrl": null
+    },
+    {
+      "name": "[한투 선진국] 최보원",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/globalbobo",
+      "sourceUrl": null
+    },
+    {
+      "name": "리딩투자증권 리서치센터",
+      "platform": "telegram",
+      "category": "리서치",
+      "url": "https://t.me/leadingR",
+      "sourceUrl": null
+    },
+    {
+      "name": "양파농장",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/Onionfarmer",
+      "sourceUrl": null
+    },
+    {
+      "name": "키움 음식료/유통 박상준",
+      "platform": "telegram",
+      "category": "유통",
+      "url": "https://t.me/sjpark_sobi",
+      "sourceUrl": null
+    },
+    {
+      "name": "29PER",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/twentynineper",
+      "sourceUrl": null
+    },
+    {
+      "name": "Find Alpha",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/studyingformydream",
+      "sourceUrl": null
+    },
+    {
+      "name": "[신한 리서치본부] 제약/바이오",
+      "platform": "telegram",
+      "category": "바이오",
+      "url": "https://t.me/bio_shinhan",
+      "sourceUrl": null
+    },
+    {
+      "name": "[하나채권] 김상만.이영주.김상훈",
+      "platform": "telegram",
+      "category": "채권",
+      "url": "https://t.me/hanabond",
+      "sourceUrl": null
+    },
+    {
+      "name": "대신 전략. 돌직구",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/daishinstrategy",
+      "sourceUrl": null
+    },
+    {
+      "name": "사제콩이_서상영",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/ehdwl",
+      "sourceUrl": null
+    },
+    {
+      "name": "세종기업데이터",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/sejongdata2013",
+      "sourceUrl": null
+    },
+    {
+      "name": "카이에 de market",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/cahier_de_market",
+      "sourceUrl": null
+    },
+    {
+      "name": "하나증권 통신 김홍식",
+      "platform": "telegram",
+      "category": "반도체",
+      "url": "https://t.me/HanaResearchTelecom",
+      "sourceUrl": null
+    },
+    {
+      "name": "AWAKE - 52주 신고가 모니터링",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/awake_realtimeCheck",
+      "sourceUrl": null
+    },
+    {
+      "name": "BZCF | 비즈까페",
+      "platform": "telegram",
+      "category": "일반",
+      "url": null,
+      "sourceUrl": "https://t.me/bzcftel"
+    },
+    {
+      "name": "[삼성증권 류형근] 반도체 이야기",
+      "platform": "telegram",
+      "category": "반도체",
+      "url": "https://t.me/hyungkeunryu",
+      "sourceUrl": null
+    },
+    {
+      "name": "간절한 투자스터디카페",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/Desperatestudycafe",
+      "sourceUrl": null
+    },
+    {
+      "name": "삼성증권 이경자",
+      "platform": "telegram",
+      "category": "리서치",
+      "url": "https://t.me/kjleess",
+      "sourceUrl": null
+    },
+    {
+      "name": "상장기업 수사대 ☎️",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/cyber_rangers",
+      "sourceUrl": null
+    },
+    {
+      "name": "서화백의 그림놀이 🚀",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/easobi",
+      "sourceUrl": null
+    },
+    {
+      "name": "우주방산AI로봇 아카이브",
+      "platform": "telegram",
+      "category": "부동산",
+      "url": "https://t.me/defence_24",
+      "sourceUrl": null
+    },
+    {
+      "name": "재야의 고수들",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/gaoshoukorea",
+      "sourceUrl": null
+    },
+    {
+      "name": "주세모(주식과 세상의 모든 이야기)",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/allstoryoftheworld",
+      "sourceUrl": null
+    },
+    {
+      "name": "트리플 아이 - Insight Information Indepth",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/triple_stock",
+      "sourceUrl": null
+    },
+    {
+      "name": "한화 Tech",
+      "platform": "telegram",
+      "category": "반도체",
+      "url": "https://t.me/hanwhatech",
+      "sourceUrl": null
+    },
+    {
+      "name": "한화투자증권 리서치센터 투자전략팀",
+      "platform": "telegram",
+      "category": "리서치",
+      "url": "https://t.me/hanwhastrategy",
+      "sourceUrl": null
+    },
+    {
+      "name": "🍒 체리쥬빌레의 반려기업 찾기",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/jpilot97",
+      "sourceUrl": null
+    },
+    {
+      "name": "LS증권 리서치센터 매크로",
+      "platform": "telegram",
+      "category": "매크로",
+      "url": "https://t.me/ebest_Invest",
+      "sourceUrl": null
+    },
+    {
+      "name": "Macro Trader",
+      "platform": "telegram",
+      "category": "매크로",
+      "url": "https://t.me/MacroAllocation",
+      "sourceUrl": null
+    },
+    {
+      "name": "가투방(DCTG) 저장소",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/gatubang",
+      "sourceUrl": null
+    },
+    {
+      "name": "너쟁이의 성실한 투자생활",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/nje2e",
+      "sourceUrl": null
+    },
+    {
+      "name": "레드버드 기업분석",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/redbirdstock",
+      "sourceUrl": null
+    },
+    {
+      "name": "슈퍼개미 이세무사TV",
+      "platform": "telegram",
+      "category": "일반",
+      "url": null,
+      "sourceUrl": null
+    },
+    {
+      "name": "영리한 동물원",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/stockinvcowcow",
+      "sourceUrl": null
+    },
+    {
+      "name": "소형주투자자 텔레그램",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/small_stock",
+      "sourceUrl": null
+    },
+    {
+      "name": "LIFE-TECHTREE/2.0",
+      "platform": "telegram",
+      "category": "반도체",
+      "url": "https://t.me/lifetechtree",
+      "sourceUrl": null
+    },
+    {
+      "name": "[미래에셋 전기전자/IT하드웨어/배터리 장비 박준서]",
+      "platform": "telegram",
+      "category": "반도체",
+      "url": "https://t.me/junseo_park",
+      "sourceUrl": null
+    },
+    {
+      "name": "미래에셋증권 매크로/시황 김석환",
+      "platform": "telegram",
+      "category": "매크로",
+      "url": "https://t.me/globalmktinsight",
+      "sourceUrl": null
+    },
+    {
+      "name": "신영증권 전략 박소연",
+      "platform": "telegram",
+      "category": "리서치",
+      "url": "https://t.me/strategy_views",
+      "sourceUrl": null
+    },
+    {
+      "name": "뭘 좋아할지 몰라 다 준비 했어",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/maddingStock",
+      "sourceUrl": null
+    },
+    {
+      "name": "주식 급등일보🚀급등테마·대장주 탐색기 (텔레그램)",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/s/FastStockNews",
+      "sourceUrl": null
+    },
+    {
+      "name": "주식스타그램",
+      "platform": "telegram",
+      "category": "일반",
+      "url": "https://t.me/jusikstagram",
+      "sourceUrl": null
+    },
+    {
+      "name": "지엘리서치 GL RESEARCH_ 주식, 경제, 독립리서치",
+      "platform": "telegram",
+      "category": "리서치",
+      "url": "https://t.me/valjuman",
+      "sourceUrl": null
+    },
+    {
+      "name": "유진증권 대체투자분석팀 (에너지/소재/바이오/기계/운송/음식료)",
+      "platform": "telegram",
+      "category": "리서치",
+      "url": "https://t.me/eugene2team",
+      "sourceUrl": null
+    },
+    {
+      "name": "윤선생 ETF 교실: ETF를 통해 글로벌 자산 시장을 바라봅니다.",
+      "platform": "telegram",
+      "category": "ETF",
+      "url": "https://t.me/qooowooo",
+      "sourceUrl": null
+    },
+    {
+      "name": "포마켓 강용운",
+      "platform": "youtube",
+      "category": "일반",
+      "url": null,
+      "sourceUrl": "https://www.youtube.com/@info_Kangyongwoon"
+    },
+    {
+      "name": "선대인TV",
+      "platform": "youtube",
+      "category": "일반",
+      "url": null,
+      "sourceUrl": "https://www.youtube.com/channel/UCaoiMB2WQPQ-hIEs9CbHM4A"
+    },
+    {
+      "name": "전인구경제연구소",
+      "platform": "youtube",
+      "category": "일반",
+      "url": null,
+      "sourceUrl": "https://www.youtube.com/@moneydo"
+    },
+    {
+      "name": "Day Trading Addict",
+      "platform": "youtube",
+      "category": "일반",
+      "url": null,
+      "sourceUrl": "https://www.youtube.com/@DayTradingAddict"
+    },
+    {
+      "name": "웅달 책방",
+      "platform": "youtube",
+      "category": "일반",
+      "url": null,
+      "sourceUrl": "https://www.youtube.com/@woong-dal"
+    },
+    {
+      "name": "ClayTrader",
+      "platform": "youtube",
+      "category": "일반",
+      "url": null,
+      "sourceUrl": "https://www.youtube.com/channel/UCn2JOViAAWssWefchGpTNvw"
+    },
+    {
+      "name": "박곰희TV",
+      "platform": "youtube",
+      "category": "일반",
+      "url": null,
+      "sourceUrl": "https://www.youtube.com/channel/UCr7XsrSrvAn_WcU4kF99bbQ"
+    },
+    {
+      "name": "달란트투자",
+      "platform": "youtube",
+      "category": "일반",
+      "url": null,
+      "sourceUrl": "https://www.youtube.com/channel/UCBM86JVoHLqg9irpR2XKvGw"
+    },
+    {
+      "name": "Stansberry Research",
+      "platform": "youtube",
+      "category": "일반",
+      "url": null,
+      "sourceUrl": "https://www.youtube.com/@StansberryMedia"
+    },
+    {
+      "name": "New Money",
+      "platform": "youtube",
+      "category": "일반",
+      "url": null,
+      "sourceUrl": "https://www.youtube.com/channel/UCvSXMi2LebwJEM1s4bz5IBA"
+    },
+    {
+      "name": "신사임당",
+      "platform": "youtube",
+      "category": "일반",
+      "url": null,
+      "sourceUrl": "https://www.youtube.com/channel/UCaJdckl6MBdDPDf75Ec_bJA"
+    },
+    {
+      "name": "미국주식으로 부자되기-미주부",
+      "platform": "youtube",
+      "category": "미국주식",
+      "url": null,
+      "sourceUrl": "https://www.youtube.com/channel/UCM_HKYb6M9ZIAjosJfWS3Lw"
+    },
+    {
+      "name": "너굴경제",
+      "platform": "youtube",
+      "category": "일반",
+      "url": null,
+      "sourceUrl": "https://www.youtube.com/channel/UCXD1p0ghcxXj8u4s5jYbGkw"
+    },
+    {
+      "name": "힐링여행자 (미국주식)",
+      "platform": "youtube",
+      "category": "미국주식",
+      "url": null,
+      "sourceUrl": "https://www.youtube.com/channel/UCHpGooMnVgnILywqrpqvZcQ"
+    },
+    {
+      "name": "Daniel Pronk",
+      "platform": "youtube",
+      "category": "일반",
+      "url": null,
+      "sourceUrl": "https://www.youtube.com/channel/UCL-F-8nxFtFZ4M3RWkGn6Qw"
+    },
+    {
+      "name": "Federal Reserve",
+      "platform": "youtube",
+      "category": "일반",
+      "url": null,
+      "sourceUrl": "https://www.youtube.com/federalreserve"
+    },
+    {
+      "name": "Meet Kevin",
+      "platform": "youtube",
+      "category": "일반",
+      "url": null,
+      "sourceUrl": "https://www.youtube.com/channel/UCUvvj5lwue7PspotMDjk5UA"
+    },
+    {
+      "name": "돈깡",
+      "platform": "youtube",
+      "category": "일반",
+      "url": null,
+      "sourceUrl": "https://www.youtube.com/channel/UCI6C5V4J8FWRcLcOdh1yElw"
+    },
+    {
+      "name": "미국주식으로 은퇴하기 - 미주은",
+      "platform": "youtube",
+      "category": "미국주식",
+      "url": null,
+      "sourceUrl": "https://www.youtube.com/channel/UCNnwmqZOxSuOiF3_c7mAGWA"
+    },
+    {
+      "name": "존리라이프스타일 주식",
+      "platform": "youtube",
+      "category": "일반",
+      "url": null,
+      "sourceUrl": "https://www.youtube.com/channel/UCXWOlSe2GHTev8QZhY_gMPg"
+    },
+    {
+      "name": "최신 특허 TV(최신 특허 동향과 기업의 발전 방향 탐구)",
+      "platform": "youtube",
+      "category": "일반",
+      "url": null,
+      "sourceUrl": "https://www.youtube.com/channel/UC4VONHYCr_74-zW63PpiTFQ"
+    },
+    {
+      "name": "공모주린이의 투자백서",
+      "platform": "youtube",
+      "category": "일반",
+      "url": null,
+      "sourceUrl": "https://www.youtube.com/channel/UCcIkTkPN8QP3PzJuwACgxMg"
+    },
+    {
+      "name": "내일은 투자왕 - 김단테",
+      "platform": "youtube",
+      "category": "일반",
+      "url": null,
+      "sourceUrl": "https://www.youtube.com/channel/UCKTMvIu9a4VGSrpWy-8bUrQ"
+    },
+    {
+      "name": "할 수 있다! 알고 투자",
+      "platform": "youtube",
+      "category": "일반",
+      "url": null,
+      "sourceUrl": "https://www.youtube.com/channel/UCSWPuzlD337Y6VBkyFPwT8g"
+    },
+    {
+      "name": "황금별의 부자노트",
+      "platform": "youtube",
+      "category": "일반",
+      "url": null,
+      "sourceUrl": "https://www.youtube.com/channel/UCkW6_HOvW5FndM_gfHPdYdA"
+    },
+    {
+      "name": "How Money Works",
+      "platform": "youtube",
+      "category": "일반",
+      "url": null,
+      "sourceUrl": "https://www.youtube.com/@HowMoneyWorks"
+    },
+    {
+      "name": "Minority Mindset",
+      "platform": "youtube",
+      "category": "일반",
+      "url": null,
+      "sourceUrl": "https://www.youtube.com/channel/UCT3EznhW_CNFcfOlyDNTLLw"
+    },
+    {
+      "name": "Ross Cameron - Warrior Trading",
+      "platform": "youtube",
+      "category": "일반",
+      "url": null,
+      "sourceUrl": "https://www.youtube.com/channel/UCBayuhgYpKNbhJxfExYkPfA"
+    },
+    {
+      "name": "The Investor Channel",
+      "platform": "youtube",
+      "category": "일반",
+      "url": null,
+      "sourceUrl": "https://www.youtube.com/channel/UC7r4-nZ4icT8SIcnisXFSHQ"
+    },
+    {
+      "name": "vip tv - 가까워진 가치투자",
+      "platform": "youtube",
+      "category": "일반",
+      "url": null,
+      "sourceUrl": "https://www.youtube.com/@vip-tv"
+    },
+    {
+      "name": "언더스탠딩 : 세상의 모든 지식",
+      "platform": "youtube",
+      "category": "일반",
+      "url": null,
+      "sourceUrl": "https://www.youtube.com/channel/UCIUni4ScRp4mqPXsxy62L5w"
+    },
+    {
+      "name": "조코딩 JoCoding",
+      "platform": "youtube",
+      "category": "일반",
+      "url": null,
+      "sourceUrl": "https://www.youtube.com/@jocoding"
+    },
+    {
+      "name": "BZCF | 비즈까페",
+      "platform": "youtube",
+      "category": "일반",
+      "url": null,
+      "sourceUrl": "https://www.youtube.com/@B_ZCF"
+    },
+    {
+      "name": "손에잡히는경제",
+      "platform": "youtube",
+      "category": "일반",
+      "url": null,
+      "sourceUrl": "https://www.youtube.com/channel/UCiYbaVEODktcsh09454Grow"
+    },
+    {
+      "name": "에스오디 SOD",
+      "platform": "youtube",
+      "category": "일반",
+      "url": null,
+      "sourceUrl": "https://www.youtube.com/channel/UCSPMRoAphbObUYeDaX367Fg"
+    },
+    {
+      "name": "하나TV [하나증권]",
+      "platform": "youtube",
+      "category": "리서치",
+      "url": null,
+      "sourceUrl": "https://www.youtube.com/channel/UCP8KMauNQ5YhTL8fzoSYcfQ"
+    },
+    {
+      "name": "슈퍼개미 이세무사TV",
+      "platform": "youtube",
+      "category": "일반",
+      "url": null,
+      "sourceUrl": "https://www.youtube.com/@leesemusaTV"
+    },
+    {
+      "name": "슈카월드",
+      "platform": "youtube",
+      "category": "일반",
+      "url": null,
+      "sourceUrl": "https://www.youtube.com/channel/UCsJ6RuBiTVWRX156FVbeaGg"
+    },
+    {
+      "name": "그로쓰리서치",
+      "platform": "youtube",
+      "category": "리서치",
+      "url": null,
+      "sourceUrl": "https://www.youtube.com/channel/UCqidkaBfdGJPb0lsjK3XqNQ"
+    },
+    {
+      "name": "이효석아카데미",
+      "platform": "youtube",
+      "category": "일반",
+      "url": null,
+      "sourceUrl": "https://www.youtube.com/@hs_academy"
+    },
+    {
+      "name": "최배근TV",
+      "platform": "youtube",
+      "category": "일반",
+      "url": null,
+      "sourceUrl": "https://www.youtube.com/channel/UC1mySWSKdHfheY5rM9zu-Vg"
+    },
+    {
+      "name": "The Plain Bagel",
+      "platform": "youtube",
+      "category": "AI",
+      "url": null,
+      "sourceUrl": "https://www.youtube.com/theplainbagel"
+    },
+    {
+      "name": "소수몽키",
+      "platform": "youtube",
+      "category": "미국주식",
+      "url": null,
+      "sourceUrl": "https://www.youtube.com/@sosumonkey"
+    },
+    {
+      "name": "오늘의 테슬라 뉴스",
+      "platform": "youtube",
+      "category": "자동차",
+      "url": null,
+      "sourceUrl": "https://www.youtube.com/channel/UCXq7NNALDnqafn3KFvIyJKA"
+    },
+    {
+      "name": "주덕",
+      "platform": "youtube",
+      "category": "일반",
+      "url": null,
+      "sourceUrl": "https://www.youtube.com/channel/UChZFFQS6ThJ_VmuE-Yzao8Q"
+    },
+    {
+      "name": "Ben Felix",
+      "platform": "youtube",
+      "category": "일반",
+      "url": null,
+      "sourceUrl": "https://www.youtube.com/channel/UCDXTQ8nWmx_EhZ2v-kp7QxA"
+    },
+    {
+      "name": "Economics Explained",
+      "platform": "youtube",
+      "category": "매크로",
+      "url": null,
+      "sourceUrl": "https://www.youtube.com/channel/UCZ4AMrDcNrfy3X6nsU8-rPg"
+    },
+    {
+      "name": "IT의 신 이형수",
+      "platform": "youtube",
+      "category": "반도체",
+      "url": null,
+      "sourceUrl": "https://www.youtube.com/channel/UCQW05vzztAlwV54WL3pjGBQ"
+    },
+    {
+      "name": "Daniel Yoo",
+      "platform": "youtube",
+      "category": "",
+      "url": null,
+      "sourceUrl": ""
     }
   ],
-  "lastUpdated": "2026-02-02"
+  "lastUpdated": "2026-02-03"
 }

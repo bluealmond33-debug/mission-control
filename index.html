@@ -2657,8 +2657,13 @@
                     <div class="inf-progress-bar">
                         <div class="inf-progress-fill" id="inf-tg-bar" style="width: 98%; background: var(--accent-green);"></div>
                     </div>
+                    <h4 style="margin-top: 1.25rem; margin-bottom: 0.75rem; font-size: 0.9rem; color: var(--text-secondary);">카테고리 분포</h4>
+                    <div class="inf-cat-grid" id="inf-tg-categories">
+                    </div>
+                </div>
 
-                    <h3 style="margin-top: 1.5rem;">🎬 유튜브 URL 수집</h3>
+                <div class="inf-section">
+                    <h3>🎬 유튜브 URL 수집</h3>
                     <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
                         <span style="color: var(--text-secondary);" id="inf-yt-progress-text">0 / 49 수집 완료</span>
                         <span style="font-weight: 600; color: var(--accent-red);" id="inf-yt-pct">0%</span>
@@ -2666,23 +2671,14 @@
                     <div class="inf-progress-bar">
                         <div class="inf-progress-fill" id="inf-yt-bar" style="width: 0%; background: var(--accent-red);"></div>
                     </div>
-                </div>
-
-                <div class="inf-section">
-                    <h3>📂 카테고리 분포 (텔레그램)</h3>
-                    <div class="inf-cat-grid" id="inf-tg-categories">
+                    <h4 style="margin-top: 1.25rem; margin-bottom: 0.75rem; font-size: 0.9rem; color: var(--text-secondary);">카테고리 분포</h4>
+                    <div class="inf-cat-grid" id="inf-yt-categories">
                     </div>
                 </div>
             </div>
 
             <div class="inf-section">
-                <h3>📂 카테고리 분포 (유튜브)</h3>
-                <div class="inf-cat-grid" id="inf-yt-categories">
-                </div>
-            </div>
-
-            <div class="inf-section">
-                <h3>📋 인플루언서 목록</h3>
+                <h3>📋 인플루언서 목록 <span style="color:var(--text-secondary);font-size:0.85rem;font-weight:400;" id="inf-table-count-wrap">(<span id="inf-table-count">0</span>명)</span></h3>
                 <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
                     <button class="btn btn-small" style="background: var(--bg-card); color: var(--text-primary); border: 1px solid var(--border);" onclick="filterInfluencers('all')" id="inf-filter-all">전체</button>
                     <button class="btn btn-small" style="background: transparent; color: var(--text-secondary); border: 1px solid var(--border);" onclick="filterInfluencers('telegram')" id="inf-filter-telegram">📨 텔레그램</button>
@@ -6997,46 +6993,36 @@
         }
 
         function renderInfluencerTable() {
-            if (!INFLUENCER_DATA) return;
-            const s = INFLUENCER_DATA.summary;
+            if (!INFLUENCER_DATA || !INFLUENCER_DATA.influencers) return;
             const search = (document.getElementById('inf-search')?.value || '').toLowerCase();
             
-            // Build combined list from summary categories (we don't have full list in summary)
-            // Use the samples + category counts for display
-            let rows = [];
-            
-            // Generate rows from category data
-            if (INFLUENCER_FILTER === 'all' || INFLUENCER_FILTER === 'telegram') {
-                Object.entries(s.telegram.categories).forEach(([cat, count]) => {
-                    if (!search || cat.toLowerCase().includes(search)) {
-                        rows.push({ platform: 'telegram', category: cat, count: count, urlCount: Math.round(count * s.telegram.withUrl / s.telegram.total) });
-                    }
-                });
-            }
-            if (INFLUENCER_FILTER === 'all' || INFLUENCER_FILTER === 'youtube') {
-                Object.entries(s.youtube.categories).forEach(([cat, count]) => {
-                    if (!search || cat.toLowerCase().includes(search)) {
-                        rows.push({ platform: 'youtube', category: cat, count: count, urlCount: Math.round(count * s.youtube.withUrl / s.youtube.total) });
-                    }
-                });
-            }
-
-            rows.sort((a,b) => b.count - a.count);
+            let rows = INFLUENCER_DATA.influencers.filter(inf => {
+                if (INFLUENCER_FILTER !== 'all' && inf.platform !== INFLUENCER_FILTER) return false;
+                if (search && !inf.name.toLowerCase().includes(search) && !inf.category.toLowerCase().includes(search)) return false;
+                return true;
+            });
 
             const tbody = document.getElementById('inf-table-body');
+            document.getElementById('inf-table-count').textContent = rows.length;
+            
             if (rows.length === 0) {
-                tbody.innerHTML = '<tr><td colspan="4" style="text-align:center;color:var(--text-secondary);">결과 없음</td></tr>';
+                tbody.innerHTML = '<tr><td colspan="4" style="text-align:center;color:var(--text-secondary);padding:2rem;">결과 없음</td></tr>';
                 return;
             }
 
-            tbody.innerHTML = rows.map(r => `
-                <tr>
-                    <td style="font-weight:500;">${r.category}</td>
-                    <td><span class="inf-platform-badge ${r.platform}">${r.platform === 'telegram' ? '📨 Telegram' : '🎬 YouTube'}</span></td>
-                    <td>${r.count}명</td>
-                    <td>${r.urlCount}/${r.count} 수집 (${Math.round(r.urlCount/r.count*100)}%)</td>
-                </tr>
-            `).join('');
+            tbody.innerHTML = rows.map(inf => {
+                const hasUrl = inf.url && inf.url.length > 0;
+                const urlIcon = hasUrl ? '✅' : '❌';
+                const urlLink = hasUrl ? `<a href="${inf.url}" target="_blank" style="color:var(--accent-blue);text-decoration:none;">${inf.url.replace('https://t.me/','t.me/')}</a>` : '<span style="color:var(--text-secondary)">미수집</span>';
+                return `
+                    <tr>
+                        <td style="font-weight:500;">${inf.name}</td>
+                        <td><span class="inf-platform-badge ${inf.platform}">${inf.platform === 'telegram' ? '📨 TG' : '🎬 YT'}</span></td>
+                        <td><span class="inf-cat-tag" style="font-size:0.8rem;padding:0.2rem 0.6rem;">${inf.category}</span></td>
+                        <td>${urlIcon} ${urlLink}</td>
+                    </tr>
+                `;
+            }).join('');
         }
 
         function filterInfluencers(platform) {
