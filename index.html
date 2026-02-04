@@ -6538,8 +6538,10 @@
 
         async function loadCollaborators() {
             if (collaboratorsLoaded) return;
-
             const container = document.getElementById('collaborators-container');
+            // TODO: implement collaborator loading
+            collaboratorsLoaded = true;
+        }
 
         // Extend switchView to load collaborators/influencers when tabs selected
         const originalSwitchView = switchView;
