@@ -6946,16 +6946,25 @@
             }
         });
 
-    </script>
+        // === AUTH & INIT ===
+        function showDashboard() {
+            const dashboard = document.getElementById('dashboard');
+            if (dashboard) dashboard.style.display = 'block';
+            const loginScreen = document.getElementById('login-screen');
+            if (loginScreen) loginScreen.style.display = 'none';
+            if (STATE.user) {
+                const btn = document.getElementById('btn-connect');
+                const profile = document.getElementById('user-profile');
+                const avatar = document.getElementById('user-avatar');
+                const uname = document.getElementById('user-name');
+                if (btn) btn.style.display = 'none';
+                if (profile) profile.style.display = 'flex';
+                if (avatar) avatar.src = STATE.user.avatar_url;
+                if (uname) uname.textContent = STATE.user.login;
+            }
+        }
 
-    </div><!-- End Dashboard -->
-
-    <script>
-    // Functions from main script need global access
-    // They're declared with 'function' keyword in script scope, which makes them global
-    // === LOGIN/AUTH GATE ===
         async function checkAuth() {
-            // Check both old and new token keys, migrate if needed
             let token = localStorage.getItem('gh_token');
             if (!token) {
                 const oldToken = localStorage.getItem('github_token');
@@ -6968,7 +6977,6 @@
             }
 
             if (!token) {
-                // No token → read-only mode (public repo)
                 STATE.token = null;
                 STATE.user = null;
                 showDashboard();
@@ -6977,70 +6985,36 @@
                 return;
             }
 
-            // Validate token
             try {
                 const response = await fetch('https://api.github.com/user', {
                     headers: { 'Authorization': `token ${token}` }
                 });
-
                 if (response.ok) {
                     const user = await response.json();
                     STATE.token = token;
                     STATE.user = user;
-                    showDashboard();
-                    await loadTasksFromGitHub();
-                    await loadCronsFromGitHub();
                 } else {
                     localStorage.removeItem('gh_token');
-                    // Still allow read-only
                     STATE.token = null;
                     STATE.user = null;
-                    showDashboard();
-                    await loadTasksFromGitHub();
-                    await loadCronsFromGitHub();
                 }
             } catch (e) {
                 console.error('Auth check failed:', e);
-                // Network error → still try read-only
                 STATE.token = null;
                 STATE.user = null;
-                showDashboard();
-                await loadTasksFromGitHub();
-                await loadCronsFromGitHub();
             }
+
+            showDashboard();
+            await loadTasksFromGitHub();
+            await loadCronsFromGitHub();
         }
 
-        function showLoginScreen() {
-            // removed
-            // removed
-        }
-
-        function showDashboard() {
-            const dashboard = document.getElementById('dashboard');
-            if (dashboard) dashboard.style.display = 'block';
-            const loginScreen = document.getElementById('login-screen');
-            if (loginScreen) loginScreen.style.display = 'none';
-
-            // Update UI with user info (safe access)
-            if (STATE.user) {
-                const btn = document.getElementById('btn-connect');
-                const profile = document.getElementById('user-profile');
-                const avatar = document.getElementById('user-avatar');
-                const name = document.getElementById('user-name');
-                if (btn) btn.style.display = 'none';
-                if (profile) profile.style.display = 'flex';
-                if (avatar) avatar.src = STATE.user.avatar_url;
-                if (name) name.textContent = STATE.user.login;
-            }
-        }
-
-        async function handleLogin() {
-            // Login removed — read-only mode
-        }
-
-        // Check auth on page load
+        // Init on page load
         checkAuth();
+
     </script>
+
+    </div><!-- End Dashboard -->
 </body>
 </html>
 <!-- test Wed Jan 28 19:46:49 CET 2026 -->
