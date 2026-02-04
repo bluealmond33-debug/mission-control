@@ -2940,39 +2940,43 @@
             lastUpdated: new Date().toISOString()
         };
         async function loadTasksFromGitHub() {
-            // Public repo: fetch without token if none available
-
             STATE.isLoading = true;
-            showToast('success', '📥 Loading tasks from GitHub...');
 
             try {
-                const headers = { 'Accept': 'application/vnd.github.v3+json' };
-                if (STATE.token) headers['Authorization'] = `token ${STATE.token}`;
+                // Try local file first, then GitHub API
+                let data;
+                try {
+                    const localRes = await fetch('data/tasks.json');
+                    if (localRes.ok) {
+                        data = await localRes.json();
+                        console.log('Loaded tasks from local file');
+                    }
+                } catch (e) { /* fall through */ }
 
-                const response = await fetch(
-                    `https://api.github.com/repos/${CONFIG.owner}/${CONFIG.repo}/contents/${CONFIG.tasksFile}`,
-                    { headers }
-                );
-
-                if (!response.ok) {
-                    throw new Error('Could not load tasks file');
+                if (!data) {
+                    const headers = { 'Accept': 'application/vnd.github.v3+json' };
+                    if (STATE.token) headers['Authorization'] = `token ${STATE.token}`;
+                    const response = await fetch(
+                        `https://api.github.com/repos/${CONFIG.owner}/${CONFIG.repo}/contents/${CONFIG.tasksFile}`,
+                        { headers }
+                    );
+                    if (response.ok) {
+                        const fileData = await response.json();
+                        const bytes = Uint8Array.from(atob(fileData.content), c => c.charCodeAt(0));
+                        data = JSON.parse(new TextDecoder().decode(bytes));
+                        STATE.fileSha = fileData.sha;
+                    }
                 }
 
-                const fileData = await response.json();
-                const bytes = Uint8Array.from(atob(fileData.content), c => c.charCodeAt(0));
-                const content = new TextDecoder().decode(bytes);
-                const data = JSON.parse(content);
-
-                STATE.data = data;
-                STATE.originalData = JSON.parse(JSON.stringify(data));
-                STATE.fileSha = fileData.sha;
-
-                console.log('Loaded tasks from GitHub:', data.tasks.length, 'tasks');
-                showToast('success', `✓ Loaded ${data.tasks.length} tasks from GitHub`);
-
+                if (data) {
+                    STATE.data = data;
+                    STATE.originalData = JSON.parse(JSON.stringify(data));
+                    console.log('Loaded', data.tasks.length, 'tasks');
+                } else {
+                    STATE.data = JSON.parse(JSON.stringify(FALLBACK_DATA));
+                }
             } catch (error) {
-                console.error('Error loading from GitHub:', error);
-                showToast('error', 'Could not load from GitHub, using cached data');
+                console.error('Error loading tasks:', error);
                 STATE.data = JSON.parse(JSON.stringify(FALLBACK_DATA));
             }
 
@@ -3042,22 +3046,34 @@
         // === CRON RENDERING ===
         async function loadCronsFromGitHub() {
             try {
-                const token = STATE.token || localStorage.getItem('gh_token');
-                const headers = { 'Accept': 'application/vnd.github.v3+json' };
-                if (token) headers['Authorization'] = `token ${token}`;
+                // Try local file first
+                let loaded = false;
+                try {
+                    const localRes = await fetch('data/crons.json');
+                    if (localRes.ok) {
+                        const content = await localRes.json();
+                        STATE.crons = content.crons || [];
+                        loaded = true;
+                        console.log('Loaded crons from local file');
+                    }
+                } catch (e) { /* fall through */ }
 
-                const response = await fetch(
-                    `https://api.github.com/repos/${CONFIG.owner}/${CONFIG.repo}/contents/data/crons.json`,
-                    { headers }
-                );
-                
-                if (response.ok) {
-                    const data = await response.json();
-                    const content = JSON.parse(decodeURIComponent(escape(atob(data.content))));
-                    STATE.crons = content.crons || [];
-                    STATE.cronsSha = data.sha; // Save SHA for later updates
-                    renderCrons();
+                if (!loaded) {
+                    const token = STATE.token || localStorage.getItem('gh_token');
+                    const headers = { 'Accept': 'application/vnd.github.v3+json' };
+                    if (token) headers['Authorization'] = `token ${token}`;
+                    const response = await fetch(
+                        `https://api.github.com/repos/${CONFIG.owner}/${CONFIG.repo}/contents/data/crons.json`,
+                        { headers }
+                    );
+                    if (response.ok) {
+                        const data = await response.json();
+                        const content = JSON.parse(decodeURIComponent(escape(atob(data.content))));
+                        STATE.crons = content.crons || [];
+                        STATE.cronsSha = data.sha;
+                    }
                 }
+                renderCrons();
             } catch (e) {
                 console.log('No crons.json found or error loading:', e);
                 STATE.crons = [];
