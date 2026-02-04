@@ -3141,24 +3141,18 @@
             lastUpdated: new Date().toISOString()
         };
         async function loadTasksFromGitHub() {
-            if (!STATE.token) {
-                console.log('No token, using fallback data');
-                STATE.data = JSON.parse(JSON.stringify(FALLBACK_DATA));
-                return;
-            }
+            // Public repo: fetch without token if none available
 
             STATE.isLoading = true;
             showToast('success', '📥 Loading tasks from GitHub...');
 
             try {
+                const headers = { 'Accept': 'application/vnd.github.v3+json' };
+                if (STATE.token) headers['Authorization'] = `token ${STATE.token}`;
+
                 const response = await fetch(
                     `https://api.github.com/repos/${CONFIG.owner}/${CONFIG.repo}/contents/${CONFIG.tasksFile}`,
-                    {
-                        headers: {
-                            'Authorization': `token ${STATE.token}`,
-                            'Accept': 'application/vnd.github.v3+json'
-                        }
-                    }
+                    { headers }
                 );
 
                 if (!response.ok) {
@@ -3166,14 +3160,13 @@
                 }
 
                 const fileData = await response.json();
-                // UTF-8 safe base64 decode
                 const bytes = Uint8Array.from(atob(fileData.content), c => c.charCodeAt(0));
                 const content = new TextDecoder().decode(bytes);
                 const data = JSON.parse(content);
 
                 STATE.data = data;
                 STATE.originalData = JSON.parse(JSON.stringify(data));
-                STATE.fileSha = fileData.sha;  // Needed for updates
+                STATE.fileSha = fileData.sha;
 
                 console.log('Loaded tasks from GitHub:', data.tasks.length, 'tasks');
                 showToast('success', `✓ Loaded ${data.tasks.length} tasks from GitHub`);
@@ -3251,9 +3244,12 @@
         async function loadCronsFromGitHub() {
             try {
                 const token = STATE.token || localStorage.getItem('gh_token');
+                const headers = { 'Accept': 'application/vnd.github.v3+json' };
+                if (token) headers['Authorization'] = `token ${token}`;
+
                 const response = await fetch(
                     `https://api.github.com/repos/${CONFIG.owner}/${CONFIG.repo}/contents/data/crons.json`,
-                    { headers: { 'Authorization': `token ${token}` } }
+                    { headers }
                 );
                 
                 if (response.ok) {
@@ -7146,17 +7142,20 @@
             if (!token) {
                 const oldToken = localStorage.getItem('github_token');
                 if (oldToken) {
-                    // Migrate old token to new key
                     localStorage.setItem('gh_token', oldToken);
                     localStorage.removeItem('github_token');
-                    localStorage.removeItem('github_user'); // Clean up old user data
+                    localStorage.removeItem('github_user');
                     token = oldToken;
-                    console.log('Migrated token from github_token to gh_token');
                 }
             }
 
             if (!token) {
-                showLoginScreen();
+                // No token → read-only mode (public repo)
+                STATE.token = null;
+                STATE.user = null;
+                showDashboard();
+                await loadTasksFromGitHub();
+                await loadCronsFromGitHub();
                 return;
             }
 
@@ -7172,14 +7171,24 @@
                     STATE.user = user;
                     showDashboard();
                     await loadTasksFromGitHub();
-                    await loadCronsFromGitHub(); // Load data after auth
+                    await loadCronsFromGitHub();
                 } else {
                     localStorage.removeItem('gh_token');
-                    showLoginScreen();
+                    // Still allow read-only
+                    STATE.token = null;
+                    STATE.user = null;
+                    showDashboard();
+                    await loadTasksFromGitHub();
+                    await loadCronsFromGitHub();
                 }
             } catch (e) {
                 console.error('Auth check failed:', e);
-                showLoginScreen();
+                // Network error → still try read-only
+                STATE.token = null;
+                STATE.user = null;
+                showDashboard();
+                await loadTasksFromGitHub();
+                await loadCronsFromGitHub();
             }
         }
 
