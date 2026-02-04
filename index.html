@@ -6945,12 +6945,7 @@
                 e.returnValue = '';
             }
         });
-    </script>
-
-    </div><!-- End Dashboard -->
-
-    <script>
-        // === LOGIN/AUTH GATE ===
+    // === LOGIN/AUTH GATE (merged into main script) ===
         async function checkAuth() {
             // Check both old and new token keys, migrate if needed
             let token = localStorage.getItem('gh_token');
