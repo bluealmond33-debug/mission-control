@@ -2663,7 +2663,7 @@
         };
 
         // === STATE ===
-        let STATE = {
+        var STATE = {
             user: null,
             token: null,
             data: null,  // Loaded from GitHub or fallback
@@ -6945,7 +6945,15 @@
                 e.returnValue = '';
             }
         });
-    // === LOGIN/AUTH GATE (merged into main script) ===
+
+    </script>
+
+    </div><!-- End Dashboard -->
+
+    <script>
+    // Functions from main script need global access
+    // They're declared with 'function' keyword in script scope, which makes them global
+    // === LOGIN/AUTH GATE ===
         async function checkAuth() {
             // Check both old and new token keys, migrate if needed
             let token = localStorage.getItem('gh_token');
