@@ -2,217 +2,133 @@
   "tasks": [
     {
       "id": "task_stockpin_community",
-      "title": "🏗️ StockPin 커뮤니티 MVP",
-      "description": "주식 인사이트 커뮤니티 웹앱 개발. Next.js + Supabase + Vercel.\n\n**현재 상태:** 프론트엔드 6개 화면 디자인 반영 완료. 백엔드 연결 필요.",
+      "title": "🏗️ StockPin 커뮤니티",
+      "description": "주식 인사이트 커뮤니티 웹앱. Next.js + Supabase + Vercel.\nhttps://stockpin-community.vercel.app\n\n**Phase 1~6 완료.** Phase 7(그래프뷰)부터 진행.",
       "status": "in_progress",
       "project": "stockpin",
-      "tags": [
-        "dev",
-        "mvp"
-      ],
+      "tags": ["dev", "mvp"],
       "subtasks": [
-        {
-          "id": "sub_001",
-          "title": "Stitch 디자인 → Next.js 변환 (6페이지)",
-          "done": true
-        },
-        {
-          "id": "sub_002",
-          "title": "사이드바 통일 (홈 피드 버전)",
-          "done": true
-        },
-        {
-          "id": "sub_003",
-          "title": "디자인 완성도 체크 & 미세 조정",
-          "done": false
-        },
-        {
-          "id": "sub_004",
-          "title": "Supabase 스키마 설계 + 셋업",
-          "done": false
-        },
-        {
-          "id": "sub_005",
-          "title": "인증 (Supabase Auth)",
-          "done": false
-        },
-        {
-          "id": "sub_006",
-          "title": "API 레이어 + 목업→실데이터 전환",
-          "done": false
-        },
-        {
-          "id": "sub_007",
-          "title": "$티커 멘션 파싱 + 연결",
-          "done": false
-        },
-        {
-          "id": "sub_008",
-          "title": "그래프 뷰 실데이터 반영",
-          "done": false
-        },
-        {
-          "id": "sub_009",
-          "title": "Vercel 배포",
-          "done": false
-        }
+        {"id": "sub_001", "title": "Phase 1: Supabase + Auth + 실데이터 연결", "done": true},
+        {"id": "sub_002", "title": "Phase 2: Yahoo Finance API + 트렌딩 위젯 + $티커", "done": true},
+        {"id": "sub_003", "title": "Phase 3: 마크다운 에디터 + 인사이트 작성", "done": true},
+        {"id": "sub_004", "title": "Phase 4: 좋아요/북마크/댓글", "done": true},
+        {"id": "sub_005", "title": "Phase 5: 포트폴리오 탭 + 차트", "done": true},
+        {"id": "sub_006", "title": "Phase 6: 캘린더 (실적/경제/공모주)", "done": true},
+        {"id": "sub_007", "title": "Phase 7: 그래프뷰 (코르크보드 컨셉)", "done": false},
+        {"id": "sub_008", "title": "Phase 8: 노트북 (핀 모음 + 시리즈 연재)", "done": false},
+        {"id": "sub_009", "title": "Phase 9: 유료 구독 / 수익 분배", "done": false},
+        {"id": "sub_010", "title": "Google OAuth 연동", "done": true},
+        {"id": "sub_011", "title": "보안 (CSP, rehype-sanitize, 이미지 MIME)", "done": true},
+        {"id": "sub_012", "title": "한국 종목 시세 매핑 (삼성전자→005930.KS)", "done": false}
       ],
       "priority": "high",
-      "dod": "6개 핵심 페이지가 실제 데이터로 동작하고 Vercel에 배포된 상태",
+      "dod": "Phase 9까지 완료 + 실사용자 온보딩",
       "comments": [
-        {
-          "author": "Pin",
-          "text": "6페이지 디자인 반영 완료. 빌드 성공. 다음: Supabase 백엔드 연결",
-          "timestamp": "2026-02-02T02:00:00Z"
-        }
+        {"author": "Pin", "text": "Phase 1~6 완료, Vercel 배포됨. 캘린더에서 미국IPO 삭제, 경제데이터 확장 완료.", "timestamp": "2026-02-05T04:00:00Z"},
+        {"author": "민기", "text": "디자인 언어: Pure Open Geometry. 둥근 r값, 배경색 금지, 선 위주.", "timestamp": "2026-02-04T00:00:00Z"}
       ],
       "createdAt": "2026-02-01T00:00:00Z"
+    },
+    {
+      "id": "task_stockpin_briefs",
+      "title": "📊 StockPin 이메일 브리프",
+      "description": "사용자 맞춤 주식 브리프를 이메일로 자동 발송.\n238개 채널 스크래핑 → AI 분석 → 인플루언서 의견 포함 리포트 생성.\n\n**킬러 피처:** 여러 인플루언서 의견을 한 곳에서 비교",
+      "status": "in_progress",
+      "project": "stockpin",
+      "tags": ["bot", "automation", "revenue"],
+      "subtasks": [
+        {"id": "sub_001", "title": "스크래퍼 구축 (TG 190 + YT 48 채널)", "done": true},
+        {"id": "sub_002", "title": "설문 폼 + Google Sheets 연동", "done": true},
+        {"id": "sub_003", "title": "첫 리포트 발송 (기규아빠 모닝 브리프)", "done": true},
+        {"id": "sub_004", "title": "통합 cron (평일 6/8/20/22시)", "done": true},
+        {"id": "sub_005", "title": "시간대별 리포트 차별화 (모닝/장전/저녁/미장)", "done": false},
+        {"id": "sub_006", "title": "인플루언서 발언 자동 매칭 고도화", "done": false},
+        {"id": "sub_007", "title": "사용자 늘었을 때 자동 스케일", "done": false},
+        {"id": "sub_008", "title": "발송 로그 + 대시보드 (Mission Control Briefs 탭)", "done": false},
+        {"id": "sub_009", "title": "확인 메일 자동 발송 (Apps Script)", "done": true}
+      ],
+      "priority": "high",
+      "dod": "10명 이상 사용자에게 매일 자동 브리프 발송 + 피드백 수집",
+      "comments": [
+        {"author": "Pin", "text": "2/5 첫 리포트 발송! 기규아빠 모닝 브리프. 인플루언서 의견(전종현, 회색인간, 상주, KB하인환) 포함.", "timestamp": "2026-02-05T05:03:00Z"},
+        {"author": "민기", "text": "인플루언서가 뭐라고 했는지 보여주는 게 매우 중요. 찬형씨도 이걸 원함.", "timestamp": "2026-02-05T04:55:00Z"}
+      ],
+      "createdAt": "2026-02-05T00:00:00Z"
     },
     {
       "id": "task_yechangpae",
       "title": "📋 예비창업패키지 지원",
-      "description": "2월 4주차 예창패 지원. 자금 확보 최우선 과제.",
+      "description": "2월 4주차 예창패 지원. 자금 확보 최우선 과제.\nStockPin 커뮤니티 + 이메일 브리프 = MVP 데모.",
       "status": "backlog",
       "project": "stockpin",
-      "tags": [
-        "business",
-        "funding"
-      ],
+      "tags": ["business", "funding"],
       "subtasks": [
-        {
-          "id": "sub_001",
-          "title": "사업계획서 작성",
-          "done": false
-        },
-        {
-          "id": "sub_002",
-          "title": "MVP 데모 준비 (배포된 URL)",
-          "done": false
-        },
-        {
-          "id": "sub_003",
-          "title": "시장 분석 / 경쟁사 조사",
-          "done": false
-        },
-        {
-          "id": "sub_004",
-          "title": "팀 구성 정리",
-          "done": false
-        },
-        {
-          "id": "sub_005",
-          "title": "제출",
-          "done": false
-        }
+        {"id": "sub_001", "title": "사업계획서 작성", "done": false},
+        {"id": "sub_002", "title": "MVP 데모 준비 (커뮤니티 URL + 브리프 샘플)", "done": false},
+        {"id": "sub_003", "title": "시장 분석 / 경쟁사 조사", "done": false},
+        {"id": "sub_004", "title": "팀 구성 정리", "done": false},
+        {"id": "sub_005", "title": "법률 검토 (유사투자자문업)", "done": true},
+        {"id": "sub_006", "title": "제출", "done": false}
       ],
       "priority": "high",
       "dod": "예창패 신청서 제출 완료",
-      "comments": [],
+      "comments": [
+        {"author": "Pin", "text": "법률 리서치 완료 (memory/legal-research-investment-advisory.md). 한국은 유료+종목의견=신고 필수.", "timestamp": "2026-02-04T13:30:00Z"}
+      ],
       "createdAt": "2026-02-02T00:00:00Z"
     },
     {
-      "id": "task_stockpin_bot",
-      "title": "🤖 StockPin 알림봇 운영",
-      "description": "텔레그램 주식 알림봇 운영 및 개선.\n설문 수집: 235개 채널 스크래핑 완료.",
+      "id": "task_outreach",
+      "title": "📣 인플루언서 아웃리치",
+      "description": "StockPin 설문 홍보 + 초기 사용자 확보.\n블로거/유튜버에게 이메일 발송.",
       "status": "in_progress",
       "project": "stockpin",
-      "tags": [
-        "bot",
-        "operations"
-      ],
+      "tags": ["marketing", "growth"],
       "subtasks": [
-        {
-          "id": "sub_001",
-          "title": "모닝 브리프 자동화 (AlertPin)",
-          "done": true
-        },
-        {
-          "id": "sub_002",
-          "title": "X 트렌드 리포트 자동화",
-          "done": true
-        },
-        {
-          "id": "sub_003",
-          "title": "설문 응답 분석",
-          "done": false
-        },
-        {
-          "id": "sub_004",
-          "title": "알림 콘텐츠 고도화",
-          "done": false
-        }
+        {"id": "sub_001", "title": "아웃리치 대상 리스트 작성", "done": true},
+        {"id": "sub_002", "title": "이메일 템플릿 작성", "done": true},
+        {"id": "sub_003", "title": "Batch 1 발송 (5명)", "done": true},
+        {"id": "sub_004", "title": "Batch 2 발송", "done": true},
+        {"id": "sub_005", "title": "응답 추적 + 후속 연락", "done": false},
+        {"id": "sub_006", "title": "설문 응답 10명 달성", "done": false}
       ],
       "priority": "medium",
-      "comments": [],
-      "createdAt": "2026-02-01T00:00:00Z"
+      "dod": "설문 응답 10명 이상 + 피드백 수집",
+      "comments": [
+        {"author": "Pin", "text": "현재 설문 응답 2명 (기규아빠, 이찬형). 아웃리치 연락처: memory/outreach-contacts.md", "timestamp": "2026-02-04T20:00:00Z"}
+      ],
+      "createdAt": "2026-02-04T00:00:00Z"
     },
     {
       "id": "task_finch",
       "title": "📱 핀치(Finch) 앱 유지보수",
-      "description": "매매일지 앱. App Store 출시 완료. 유지보수 모드.",
+      "description": "매매일지 앱. App Store 출시 완료. 유지보수 모드.\n팀: 백엔드 1명, 앱개발자 2명.",
       "status": "permanent",
       "project": "finch",
-      "tags": [
-        "app",
-        "maintenance"
-      ],
+      "tags": ["app", "maintenance"],
       "subtasks": [
-        {
-          "id": "sub_001",
-          "title": "버그 리포트 모니터링",
-          "done": false
-        },
-        {
-          "id": "sub_002",
-          "title": "사용자 피드백 수집",
-          "done": false
-        }
+        {"id": "sub_001", "title": "버그 리포트 모니터링", "done": false},
+        {"id": "sub_002", "title": "사용자 피드백 수집", "done": false}
       ],
       "priority": "low",
       "comments": [],
       "createdAt": "2026-01-01T00:00:00Z"
     },
     {
-      "id": "task_pin_upgrade",
-      "title": "🧠 Pin 자기 개선",
-      "description": "스킬 설치, 메모리 관리, 자동화 최적화.\n12개 ClawHub 스킬 설치 완료.",
-      "status": "in_progress",
+      "id": "task_pin_ops",
+      "title": "📌 Pin 시스템 운영",
+      "description": "자동화, 모니터링, 메모리 관리.\n텔레그램 Watchdog, Health Check, Backup 등.",
+      "status": "permanent",
       "project": "pin",
-      "tags": [
-        "ai",
-        "optimization"
-      ],
+      "tags": ["ai", "ops"],
       "subtasks": [
-        {
-          "id": "sub_001",
-          "title": "ClawHub 스킬 12개 설치",
-          "done": true
-        },
-        {
-          "id": "sub_002",
-          "title": "보안 리뷰 완료",
-          "done": true
-        },
-        {
-          "id": "sub_003",
-          "title": "텔레그램 자동 복구 설정",
-          "done": true
-        },
-        {
-          "id": "sub_004",
-          "title": "Proactive Agent 패턴 적용",
-          "done": false
-        },
-        {
-          "id": "sub_005",
-          "title": "옵시디언 vault 정리",
-          "done": false
-        },
-        {
-          "id": "sub_006",
-          "title": "Mission Control 대시보드 셋업",
-          "done": true
-        }
+        {"id": "sub_001", "title": "텔레그램 Watchdog (30분마다)", "done": true},
+        {"id": "sub_002", "title": "System Health Check (4시간마다)", "done": true},
+        {"id": "sub_003", "title": "Daily Backup & Git Check", "done": true},
+        {"id": "sub_004", "title": "AlertPin 모닝 브리프", "done": true},
+        {"id": "sub_005", "title": "X 트렌드 리포트 + ClawdHub", "done": true},
+        {"id": "sub_006", "title": "Mission Control 대시보드", "done": true},
+        {"id": "sub_007", "title": "MEMORY.md 주기적 정리", "done": false}
       ],
       "priority": "medium",
       "comments": [],
@@ -220,50 +136,17 @@
     }
   ],
   "projects": [
-    {
-      "id": "stockpin",
-      "name": "StockPin",
-      "color": "#6C5CE7",
-      "icon": "📈"
-    },
-    {
-      "id": "finch",
-      "name": "Finch",
-      "color": "#10b981",
-      "icon": "📱"
-    },
-    {
-      "id": "pin",
-      "name": "Pin 운영",
-      "color": "#f59e0b",
-      "icon": "📌"
-    }
+    {"id": "stockpin", "name": "StockPin", "color": "#6C5CE7", "icon": "📈"},
+    {"id": "finch", "name": "Finch", "color": "#10b981", "icon": "📱"},
+    {"id": "pin", "name": "Pin 운영", "color": "#f59e0b", "icon": "📌"}
   ],
   "activities": [
-    {
-      "type": "completed",
-      "actor": "Pin",
-      "task": "ClawHub 스킬 12개 설치 + 보안 리뷰",
-      "time": "just now"
-    },
-    {
-      "type": "completed",
-      "actor": "Pin",
-      "task": "텔레그램 자동 복구 설정",
-      "time": "30m ago"
-    },
-    {
-      "type": "completed",
-      "actor": "Pin",
-      "task": "StockPin 커뮤니티 6페이지 디자인 반영",
-      "time": "1h ago"
-    },
-    {
-      "type": "created",
-      "actor": "민기",
-      "task": "예비창업패키지 지원",
-      "time": "today"
-    }
+    {"type": "completed", "actor": "Pin", "task": "첫 이메일 브리프 발송 (기규아빠)", "time": "just now"},
+    {"type": "completed", "actor": "Pin", "task": "StockPin 브리프 통합 cron 설정", "time": "10m ago"},
+    {"type": "completed", "actor": "Pin", "task": "캘린더 미국IPO 삭제 + 경제데이터 확장", "time": "20m ago"},
+    {"type": "completed", "actor": "Pin", "task": "Mission Control Briefs 탭 추가 (진행중)", "time": "30m ago"},
+    {"type": "completed", "actor": "Pin", "task": "스크래퍼 238채널 수집 완료", "time": "1h ago"},
+    {"type": "created", "actor": "민기", "task": "이메일 브리프 시스템 시작", "time": "today"}
   ],
-  "lastUpdated": "2026-02-02T02:58:00Z"
+  "lastUpdated": "2026-02-05T05:14:00Z"
 }
