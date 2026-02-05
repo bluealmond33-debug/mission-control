@@ -6564,6 +6564,17 @@
                 renderInfluencerDashboard();
                 return;
             }
+
+            // Try local first
+            try {
+                const localRes = await fetch('data/influencers.json');
+                if (localRes.ok) {
+                    INFLUENCER_DATA = await localRes.json();
+                    renderInfluencerDashboard();
+                    return;
+                }
+            } catch (e) { /* fall through */ }
+
             try {
                 const token = STATE.token || localStorage.getItem('gh_token');
                 const response = await fetch(
@@ -6575,7 +6586,7 @@
                     INFLUENCER_DATA = JSON.parse(decodeURIComponent(escape(atob(data.content))));
                     renderInfluencerDashboard();
                 } else {
-                    document.getElementById('inf-table-body').innerHTML = '<tr><td colspan="4" style="text-align:center;color:var(--text-secondary);">데이터를 불러올 수 없습니다. GitHub에 로그인하세요.</td></tr>';
+                    document.getElementById('inf-table-body').innerHTML = '<tr><td colspan="4" style="text-align:center;color:var(--text-secondary);">데이터를 불러올 수 없습니다.</td></tr>';
                 }
             } catch (e) {
                 console.error('Error loading influencer data:', e);
@@ -6683,34 +6694,54 @@
                 return;
             }
 
-            const token = STATE.token || localStorage.getItem('gh_token');
+            // Try local first, then GitHub API
             try {
-                const response = await fetch(
-                    `https://api.github.com/repos/${CONFIG.owner}/${CONFIG.repo}/contents/data/briefs.json`,
-                    { headers: { 'Authorization': `token ${token}` } }
-                );
-                if (response.ok) {
-                    const data = await response.json();
-                    BRIEF_DATA = JSON.parse(decodeURIComponent(escape(atob(data.content))));
+                const localRes = await fetch('data/briefs.json');
+                if (localRes.ok) {
+                    BRIEF_DATA = await localRes.json();
                 }
-            } catch (e) {
-                console.error('Error loading briefs data:', e);
+            } catch (e) { /* fall through */ }
+
+            if (!BRIEF_DATA) {
+                const token = STATE.token || localStorage.getItem('gh_token');
+                try {
+                    const response = await fetch(
+                        `https://api.github.com/repos/${CONFIG.owner}/${CONFIG.repo}/contents/data/briefs.json`,
+                        { headers: { 'Authorization': `token ${token}` } }
+                    );
+                    if (response.ok) {
+                        const data = await response.json();
+                        BRIEF_DATA = JSON.parse(decodeURIComponent(escape(atob(data.content))));
+                    }
+                } catch (e) {
+                    console.error('Error loading briefs data:', e);
+                }
             }
 
             try {
-                const response = await fetch(
-                    `https://api.github.com/repos/${CONFIG.owner}/${CONFIG.repo}/contents/data/brief-logs.json`,
-                    { headers: { 'Authorization': `token ${token}` } }
-                );
-                if (response.ok) {
-                    const data = await response.json();
-                    BRIEF_LOGS = JSON.parse(decodeURIComponent(escape(atob(data.content))));
-                } else {
-                    BRIEF_LOGS = { logs: [] };
+                const localRes = await fetch('data/brief-logs.json');
+                if (localRes.ok) {
+                    BRIEF_LOGS = await localRes.json();
                 }
-            } catch (e) {
-                BRIEF_LOGS = { logs: [] };
-                console.error('Error loading brief logs:', e);
+            } catch (e) { /* fall through */ }
+
+            if (!BRIEF_LOGS) {
+                const token = STATE.token || localStorage.getItem('gh_token');
+                try {
+                    const response = await fetch(
+                        `https://api.github.com/repos/${CONFIG.owner}/${CONFIG.repo}/contents/data/brief-logs.json`,
+                        { headers: { 'Authorization': `token ${token}` } }
+                    );
+                    if (response.ok) {
+                        const data = await response.json();
+                        BRIEF_LOGS = JSON.parse(decodeURIComponent(escape(atob(data.content))));
+                    } else {
+                        BRIEF_LOGS = { logs: [] };
+                    }
+                } catch (e) {
+                    BRIEF_LOGS = { logs: [] };
+                    console.error('Error loading brief logs:', e);
+                }
             }
 
             if (!STATE.crons || STATE.crons.length === 0) {
