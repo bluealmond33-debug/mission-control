@@ -28,33 +28,35 @@
     {
       "id": "task_stockpin_briefs",
       "title": "📊 StockPin 이메일 브리핑",
-      "description": "사용자 맞춤 주식 브리핑을 이메일로 자동 발송.\n238개 채널 스크래핑 → AI 분석 → 인플루언서 의견 포함.\n\n**다크 테마 + 보라색 액센트 디자인 확정**",
-      "status": "done",
+      "description": "사용자 맞춤 주식 브리핑을 이메일로 자동 발송.\n238개 채널 스크래핑 → AI 분석.\n\n**다크 테마 + 보라색 액센트 디자인 확정**",
+      "status": "in_progress",
       "project": "stockpin",
       "tags": ["bot", "automation", "revenue"],
       "subtasks": [
         {"id": "sub_001", "title": "스크래퍼 구축 (TG 190 + YT 48 채널)", "done": true},
         {"id": "sub_002", "title": "설문 폼 + Google Sheets 연동", "done": true},
-        {"id": "sub_003", "title": "첫 리포트 발송 (기규아빠 모닝)", "done": true},
-        {"id": "sub_004", "title": "브리핑 템플릿 문서화", "done": true},
-        {"id": "sub_005", "title": "사용자별 맞춤 내용 (섹터/종목)", "done": true},
-        {"id": "sub_006", "title": "다크 테마 디자인 확정", "done": true},
-        {"id": "sub_007", "title": "브리핑 스킬 등록 (stockpin-briefing)", "done": true},
-        {"id": "sub_008", "title": "찬형 미장전 브리핑 발송", "done": true},
-        {"id": "sub_009", "title": "민기 미장전 브리핑 발송", "done": true},
-        {"id": "sub_010", "title": "Apps Script URL 업데이트", "done": true}
+        {"id": "sub_003", "title": "브리핑 스킬 등록 (stockpin-briefing)", "done": true},
+        {"id": "sub_004", "title": "다크 테마 디자인 확정", "done": true},
+        {"id": "sub_005", "title": "자동 cron 발송 설정", "done": false}
       ],
       "priority": "high",
       "dod": "10명 이상 사용자에게 매일 자동 브리핑 발송",
-      "comments": [
-        {"author": "Pin", "text": "다크 테마 + 보라색 왼쪽 선 + 구분선 3곳 디자인 확정", "timestamp": "2026-02-06T02:34:00Z"}
+      "briefSchedule": {
+        "이찬형": {"email": "leechan565@gmail.com", "times": ["미장전(22시)"], "sectors": ["미국주식", "크립토"]},
+        "기규아빠": {"email": "blind0843@gmail.com", "times": ["장전(8시)", "저녁(20시)"], "sectors": ["반도체", "2차전지", "금융"]},
+        "김민기": {"email": "kmk150812@gmail.com", "times": ["오전(10시)", "미장전(22시)"], "sectors": ["반도체", "AI", "2차전지", "코인"]}
+      },
+      "recentSends": [
+        {"to": "김민기", "type": "미장전", "time": "2026-02-06 02:34", "status": "sent"},
+        {"to": "이찬형", "type": "미장전", "time": "2026-02-05 22:03", "status": "sent"},
+        {"to": "기규아빠", "type": "장전 테스트", "time": "2026-02-06 02:19", "status": "sent"}
       ],
       "createdAt": "2026-02-05T00:00:00Z"
     },
     {
       "id": "task_early_access",
       "title": "🎉 Early Access 100명 모집",
-      "description": "첫 100명 무료 사용자 모집.\n쓰레드 + 노션 커뮤니티 → Tally 폼 → 초대코드 → 가입\n\n피드백 → 정식 출시 때 Pro 1년 무료",
+      "description": "첫 100명 무료 사용자 모집.\n쓰레드 + 노션 커뮤니티 → Tally 폼 → 초대코드 → 가입",
       "status": "in_progress",
       "project": "stockpin",
       "tags": ["marketing", "growth"],
@@ -117,11 +119,12 @@
     {"id": "pin", "name": "Pin 운영", "color": "#f59e0b", "icon": "📌"}
   ],
   "activities": [
-    {"type": "completed", "actor": "Pin", "task": "브리핑 다크 테마 디자인 확정", "time": "just now"},
-    {"type": "completed", "actor": "Pin", "task": "브리핑 스킬 등록 (stockpin-briefing)", "time": "5m ago"},
-    {"type": "completed", "actor": "Pin", "task": "민기 미장전 브리핑 발송", "time": "10m ago"},
-    {"type": "completed", "actor": "Pin", "task": "Apps Script URL 업데이트", "time": "30m ago"},
-    {"type": "completed", "actor": "Pin", "task": "찬형 미장전 브리핑 발송", "time": "1h ago"}
+    {"type": "sent", "actor": "Pin", "task": "김민기 미장전 브리핑 발송", "time": "2026-02-06 02:34"},
+    {"type": "sent", "actor": "Pin", "task": "기규아빠 장전 브리핑 테스트", "time": "2026-02-06 02:19"},
+    {"type": "completed", "actor": "Pin", "task": "브리핑 다크 테마 디자인 확정", "time": "2026-02-06 02:34"},
+    {"type": "completed", "actor": "Pin", "task": "브리핑 스킬 등록 (stockpin-briefing)", "time": "2026-02-06 02:30"},
+    {"type": "completed", "actor": "Pin", "task": "Apps Script URL 업데이트", "time": "2026-02-06 02:04"},
+    {"type": "sent", "actor": "Pin", "task": "이찬형 미장전 브리핑 발송", "time": "2026-02-05 22:03"}
   ],
-  "lastUpdated": "2026-02-06T02:36:00Z"
+  "lastUpdated": "2026-02-06T02:40:00Z"
 }
