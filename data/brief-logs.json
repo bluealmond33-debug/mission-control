@@ -1,12 +1,32 @@
 {
   "logs": [
     {
+      "date": "2026-02-06",
+      "time": "02:34",
+      "recipient": "김민기",
+      "type": "미장 브리프",
+      "status": "sent"
+    },
+    {
+      "date": "2026-02-06",
+      "time": "02:19",
+      "recipient": "기규아빠",
+      "type": "장전 테스트",
+      "status": "sent"
+    },
+    {
+      "date": "2026-02-05",
+      "time": "22:03",
+      "recipient": "이찬형",
+      "type": "미장 브리프",
+      "status": "sent"
+    },
+    {
       "date": "2026-02-05",
       "time": "05:03",
       "recipient": "기규아빠",
       "type": "모닝 브리프",
-      "status": "sent",
-      "file": "2026-02-05-morning-kigyuappa.html"
+      "status": "sent"
     }
   ]
 }

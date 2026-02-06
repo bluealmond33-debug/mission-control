@@ -5,22 +5,33 @@
       "email": "blind0843@gmail.com",
       "sectors": ["반도체", "2차전지", "금융"],
       "stocks": ["신세계"],
-      "timeSlots": ["06:00", "08:00", "20:00"],
-      "channel": "이메일"
+      "timeSlots": ["06:00", "20:00"],
+      "channel": "카카오톡",
+      "signupDate": "2026-02-01"
     },
     {
       "nickname": "이찬형",
       "email": "leechan565@gmail.com",
       "sectors": ["시황전반"],
-      "stocks": ["CRCL"],
+      "stocks": ["써클인터넷그룹"],
       "timeSlots": ["22:00"],
       "channel": "이메일",
+      "signupDate": "2026-02-04",
       "note": "인플루언서 의견 비교 중시"
+    },
+    {
+      "nickname": "김민기",
+      "email": "kmk150812@gmail.com",
+      "sectors": ["반도체", "바이오", "AI", "자동차", "2차전지", "게임", "건설", "금융"],
+      "stocks": ["코인베이스"],
+      "timeSlots": ["10:00", "22:00"],
+      "channel": "이메일",
+      "signupDate": "2026-02-05"
     }
   ],
   "schedule": [
     {"time": "06:00", "name": "모닝 브리프", "desc": "전날 미장 마감 + 오늘 시장 전망"},
-    {"time": "08:00", "name": "장전 브리프", "desc": "오늘 주목 종목/이벤트 + 수급"},
+    {"time": "10:00", "name": "오전 브리프", "desc": "한국장 오전 동향 + 주요 뉴스"},
     {"time": "20:00", "name": "저녁 브리프", "desc": "한국장 마감 정리 + 미장 프리뷰"},
     {"time": "22:00", "name": "미장 브리프", "desc": "미장 개장 직전 + 인플루언서 의견"}
   ]
