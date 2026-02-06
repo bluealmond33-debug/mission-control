@@ -1,67 +1,125 @@
 {
-  "crons": [
+  "lastUpdated": "2026-02-07T00:42:00Z",
+  "jobs": [
     {
-      "id": "b21a20aa-b4f0-4ef1-8dac-6f624f97e017",
-      "name": "☀️ AlertPin 모닝 브리프",
-      "schedule": "0 7 * * *",
-      "scheduleHuman": "Every day at 7:00 AM",
+      "id": "37985cf9-9d22-454e-b8b9-63dfbd965fbc",
+      "name": "🔌 Telegram Watchdog",
       "enabled": true,
+      "schedule": "every 30min",
+      "lastRunAt": "2026-02-07 00:16",
       "lastStatus": "ok",
-      "nextRunAt": null
-    },
-    {
-      "id": "ffa8caea-a0ff-440d-b2b0-f5765d63e3a8",
-      "name": "🐦 X + Threads 트렌드 리포트 + ClawdHub",
-      "schedule": "30 7 * * *",
-      "scheduleHuman": "Every day at 7:30 AM",
-      "enabled": true,
-      "lastStatus": "ok",
-      "nextRunAt": null
+      "lastDurationMs": 10778,
+      "nextRunAt": "2026-02-07 04:20"
     },
     {
       "id": "5baada52-4ba8-49fe-9992-977fe9a792a6",
       "name": "🏥 System Health Check",
-      "schedule": "every 4h",
-      "scheduleHuman": "Every 4 hours",
       "enabled": true,
+      "schedule": "every 4h",
+      "lastRunAt": "2026-02-06 23:33",
       "lastStatus": "ok",
-      "nextRunAt": null
+      "lastDurationMs": 24287,
+      "nextRunAt": "2026-02-07 07:50"
     },
     {
-      "id": "0f1fd71b-ca20-47b7-9873-1c1274afc2b0",
-      "name": "📊 Weekly Metrics Report",
-      "schedule": "0 10 * * 1",
-      "scheduleHuman": "Every Monday at 10:00 AM",
+      "id": "3302edd1-c90d-4948-b37b-334657578c1b",
+      "name": "📡 TG 스크래핑 (05시)",
       "enabled": true,
+      "schedule": "cron 0 5 * * * (KST)",
+      "lastRunAt": "2026-02-06 05:00",
       "lastStatus": "ok",
-      "nextRunAt": null
+      "lastDurationMs": 9,
+      "nextRunAt": "2026-02-07 05:00"
     },
     {
       "id": "ac315876-1304-408b-a615-ee5fe514b1ca",
       "name": "💾 Backup & Git Check",
-      "schedule": "0 6 * * *",
-      "scheduleHuman": "Daily at 6:00 AM",
       "enabled": true,
+      "schedule": "cron 0 6 * * * (KST)",
+      "lastRunAt": "2026-02-06 06:00",
       "lastStatus": "ok",
-      "nextRunAt": null
+      "lastDurationMs": 48439,
+      "nextRunAt": "2026-02-07 06:00"
+    },
+    {
+      "id": "ffa8caea-a0ff-440d-b2b0-f5765d63e3a8",
+      "name": "📌 Pin's Daily Brief (통합)",
+      "enabled": true,
+      "schedule": "cron 30 7 * * * (KST)",
+      "lastRunAt": "2026-02-06 07:30",
+      "lastStatus": "ok",
+      "lastDurationMs": 143036,
+      "nextRunAt": "2026-02-07 07:30"
+    },
+    {
+      "id": "303e0f23-6aec-49cf-bfad-4a01da548381",
+      "name": "📡 TG 스크래핑 (11시)",
+      "enabled": true,
+      "schedule": "cron 0 11 * * * (KST)",
+      "lastRunAt": "2026-02-06 11:00",
+      "lastStatus": "ok",
+      "lastDurationMs": 14,
+      "nextRunAt": "2026-02-07 11:00"
+    },
+    {
+      "id": "a57d806a-1d53-4436-8630-cc531e6d2abf",
+      "name": "📡 TG 스크래핑 (17시)",
+      "enabled": true,
+      "schedule": "cron 0 17 * * * (KST)",
+      "lastRunAt": "2026-02-06 17:00",
+      "lastStatus": "ok",
+      "lastDurationMs": 9,
+      "nextRunAt": "2026-02-07 17:00"
+    },
+    {
+      "id": "fbb1e076-e360-4b29-a4dd-be29d0ad6f3b",
+      "name": "📡 TG 스크래핑 (23시)",
+      "enabled": true,
+      "schedule": "cron 0 23 * * * (KST)",
+      "lastRunAt": null,
+      "lastStatus": null,
+      "lastDurationMs": null,
+      "nextRunAt": "2026-02-07 23:00"
+    },
+    {
+      "id": "04f9c340-f57c-4383-b8ef-58c974a25732",
+      "name": "📊 StockPin 이메일 브리핑",
+      "enabled": true,
+      "schedule": "cron 0 6,8,20,22 * * 1-5 (KST)",
+      "lastRunAt": "2026-02-06 20:00",
+      "lastStatus": "ok",
+      "lastDurationMs": 217511,
+      "nextRunAt": "2026-02-10 06:00 (평일만)"
+    },
+    {
+      "id": "5046305b-ba79-4956-8249-eded19636476",
+      "name": "📚 Pin 지식 리포지토리 주간 리뷰",
+      "enabled": true,
+      "schedule": "cron 0 11 * * 0 (KST, 일요일)",
+      "lastRunAt": null,
+      "lastStatus": null,
+      "lastDurationMs": null,
+      "nextRunAt": "2026-02-09 11:00"
+    },
+    {
+      "id": "0f1fd71b-ca20-47b7-9873-1c1274afc2b0",
+      "name": "📊 Weekly Metrics Report",
+      "enabled": true,
+      "schedule": "cron 0 10 * * 1 (KST, 월요일)",
+      "lastRunAt": null,
+      "lastStatus": null,
+      "lastDurationMs": null,
+      "nextRunAt": "2026-02-10 10:00"
     },
     {
       "id": "bf30e5b9-6c13-4a8c-82a3-e5b21be795a7",
       "name": "📅 Monthly Progress Review",
-      "schedule": "0 9 1 * *",
-      "scheduleHuman": "1st of every month at 9:00 AM",
       "enabled": true,
-      "lastStatus": "ok",
-      "nextRunAt": null
-    },
-    {
-      "id": "04f9c340-f57c-4383-b8ef-58c974a25732",
-      "name": "📊 StockPin 이메일 브리프",
-      "schedule": "0 6,8,20,22 * * 1-5",
-      "scheduleHuman": "Weekdays at 6, 8, 20, 22시",
-      "enabled": true,
-      "lastStatus": "ok",
-      "nextRunAt": null
+      "schedule": "cron 0 9 1 * * (KST, 매월 1일)",
+      "lastRunAt": null,
+      "lastStatus": null,
+      "lastDurationMs": null,
+      "nextRunAt": "2026-03-01 09:00"
     }
   ]
 }

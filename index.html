@@ -2422,10 +2422,21 @@
             </div>
 
             <div class="brief-section">
-                <h3>⏱️ Cron 상태</h3>
-                <div class="brief-cron-card" id="brief-cron-card">
-                    <div class="brief-cron-title">StockPin 이메일 브리프</div>
-                    <div class="brief-cron-meta" id="brief-cron-meta">상태 로딩 중...</div>
+                <h3>⏱️ Cron 실행 기록</h3>
+                <div id="cron-jobs-empty" class="brief-empty" style="display:none;">Cron 데이터가 없습니다.</div>
+                <div id="cron-jobs-table-wrap" style="max-height: 400px; overflow-y: auto;">
+                    <table class="brief-table">
+                        <thead>
+                            <tr>
+                                <th>작업명</th>
+                                <th>스케줄</th>
+                                <th>마지막 실행</th>
+                                <th>상태</th>
+                                <th>다음 실행</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cron-jobs-body"></tbody>
+                    </table>
                 </div>
             </div>
         </div>
@@ -6706,6 +6717,7 @@
         // === BRIEFS ===
         let BRIEF_DATA = null;
         let BRIEF_LOGS = null;
+        let CRON_DATA = null;
 
         async function loadBriefsData() {
             if (BRIEF_DATA && BRIEF_LOGS) {
@@ -6767,6 +6779,16 @@
                 await loadCronsFromGitHub();
             }
 
+            // Load cron data from local file
+            try {
+                const localRes = await fetch('data/crons.json');
+                if (localRes.ok) {
+                    CRON_DATA = await localRes.json();
+                }
+            } catch (e) { 
+                CRON_DATA = { jobs: [] };
+            }
+
             renderBriefsDashboard();
         }
 
@@ -6777,7 +6799,6 @@
             const logsBody = document.getElementById('brief-logs-body');
             const logsEmpty = document.getElementById('brief-logs-empty');
             const logsTableWrap = document.getElementById('brief-logs-table-wrap');
-            const cronMeta = document.getElementById('brief-cron-meta');
 
             if (!BRIEF_DATA) {
                 scheduleGrid.innerHTML = '<div class="brief-empty">브리프 데이터를 불러올 수 없습니다. GitHub에 로그인하세요.</div>';
@@ -6845,14 +6866,33 @@
                 }).join('');
             }
 
-            const cron = (STATE.crons || []).find(c => (c.name || '').includes('StockPin 이메일 브리프'));
-            if (!cron) {
-                cronMeta.textContent = '등록된 Cron이 없습니다.';
+            // Render cron jobs table
+            const cronJobsBody = document.getElementById('cron-jobs-body');
+            const cronJobsEmpty = document.getElementById('cron-jobs-empty');
+            const cronJobsTableWrap = document.getElementById('cron-jobs-table-wrap');
+            const cronJobs = CRON_DATA && CRON_DATA.jobs ? CRON_DATA.jobs : [];
+            
+            if (!cronJobs || cronJobs.length === 0) {
+                cronJobsEmpty.style.display = 'block';
+                cronJobsTableWrap.style.display = 'none';
             } else {
-                const statusText = cron.lastStatus ? cron.lastStatus.toUpperCase() : 'UNKNOWN';
-                const enabledText = cron.enabled ? 'ON' : 'OFF';
-                const scheduleText = cron.scheduleHuman || cron.schedule || 'N/A';
-                cronMeta.textContent = `활성화: ${enabledText} · 최근 상태: ${statusText} · 스케줄: ${scheduleText}`;
+                cronJobsEmpty.style.display = 'none';
+                cronJobsTableWrap.style.display = 'block';
+                cronJobsBody.innerHTML = cronJobs.map(job => {
+                    const status = (job.lastStatus || '').toLowerCase();
+                    const statusLabel = status === 'ok' ? '✅ 성공' : status === 'error' ? '❌ 실패' : '⏳ 대기';
+                    const statusClass = status === 'ok' ? 'sent' : status === 'error' ? 'failed' : '';
+                    const enabledBadge = job.enabled ? '' : '<span style="color:#ef4444;font-size:0.75rem;">(비활성)</span>';
+                    return `
+                        <tr>
+                            <td style="font-weight:500;">${job.name} ${enabledBadge}</td>
+                            <td style="font-size:0.8rem;color:var(--text-secondary);">${job.schedule || '-'}</td>
+                            <td>${job.lastRunAt || '-'}</td>
+                            <td><span class="brief-status-badge ${statusClass}">${statusLabel}</span></td>
+                            <td style="font-size:0.85rem;">${job.nextRunAt || '-'}</td>
+                        </tr>
+                    `;
+                }).join('');
             }
         }
 
