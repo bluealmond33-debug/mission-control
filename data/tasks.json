@@ -42,9 +42,37 @@
       "priority": "high",
       "dod": "10명 이상 사용자에게 매일 자동 브리핑 발송",
       "briefSchedule": {
-        "이찬형": {"email": "leechan565@gmail.com", "times": ["미장전(22시)"], "sectors": ["미국주식", "크립토"]},
-        "기규아빠": {"email": "blind0843@gmail.com", "times": ["장전(8시)", "저녁(20시)"], "sectors": ["반도체", "2차전지", "금융"]},
-        "김민기": {"email": "kmk150812@gmail.com", "times": ["오전(10시)", "미장전(22시)"], "sectors": ["반도체", "AI", "2차전지", "코인"]}
+        "기규아빠": {
+          "channel": "카카오톡",
+          "email": "blind0843@gmail.com",
+          "times": ["모닝(6시)", "저녁(20시)"],
+          "markets": ["한국주식"],
+          "sectors": ["반도체", "2차전지", "금융"],
+          "alertTypes": ["목표가", "뉴스공시"],
+          "watchlist": ["신세계"],
+          "signupDate": "2026-02-01"
+        },
+        "이찬형": {
+          "channel": "이메일",
+          "email": "leechan565@gmail.com",
+          "times": ["미장전(22시)"],
+          "markets": ["한국주식", "미국주식"],
+          "sectors": ["시황에 맞는 섹터"],
+          "alertTypes": ["급등급락", "뉴스공시"],
+          "watchlist": ["써클인터넷그룹"],
+          "signupDate": "2026-02-04",
+          "feedback": "특정 뉴스/사건에 대한 다양한 인플루언서/전문가/AI 의견을 한 번에 보고 싶음"
+        },
+        "김민기": {
+          "channel": "이메일",
+          "email": "kmk150812@gmail.com",
+          "times": ["오전(10시)", "미장전(22시)"],
+          "markets": ["한국주식", "미국주식", "ETF", "코인"],
+          "sectors": ["반도체", "바이오", "AI", "자동차", "2차전지", "게임", "건설", "금융"],
+          "alertTypes": ["상세분석", "뉴스요약", "인플루언서의견", "차트요약", "이벤트"],
+          "watchlist": ["코인베이스"],
+          "signupDate": "2026-02-05"
+        }
       },
       "recentSends": [
         {"to": "김민기", "type": "미장전", "time": "2026-02-06 02:34", "status": "sent"},
@@ -126,5 +154,5 @@
     {"type": "completed", "actor": "Pin", "task": "Apps Script URL 업데이트", "time": "2026-02-06 02:04"},
     {"type": "sent", "actor": "Pin", "task": "이찬형 미장전 브리핑 발송", "time": "2026-02-05 22:03"}
   ],
-  "lastUpdated": "2026-02-06T02:40:00Z"
+  "lastUpdated": "2026-02-07T00:28:00Z"
 }

@@ -5033,6 +5033,17 @@
             document.querySelectorAll('.nav-tab').forEach(tab => {
                 tab.classList.toggle('active', tab.dataset.view === viewName);
             });
+
+            // Save current view to localStorage for persistence
+            localStorage.setItem('mc_current_view', viewName);
+        }
+
+        // Restore view from localStorage on page load
+        function restoreView() {
+            const savedView = localStorage.getItem('mc_current_view');
+            if (savedView && ['tasks', 'influencers', 'briefs'].includes(savedView)) {
+                switchView(savedView);
+            }
         }
 
         function generateChangesSummary() {
@@ -6858,6 +6869,10 @@
                 if (icon) icon.textContent = '☰';
                 if (reopen) reopen.style.display = 'flex';
             }
+            
+            // Restore last viewed tab
+            restoreView();
+            
             // Auth is now handled by checkAuth() in the login script below
         });
 
