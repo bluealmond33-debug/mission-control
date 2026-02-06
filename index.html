@@ -182,10 +182,15 @@
         .briefs-dashboard {
             display: flex;
             flex-direction: column;
-            gap: 1.75rem;
+            gap: 2rem;
+        }
+        .brief-section {
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            padding: 1.5rem;
         }
         .brief-section h3 {
-            margin-bottom: 0.75rem;
+            margin-bottom: 1rem;
         }
         .brief-schedule-grid {
             display: grid;
@@ -1242,6 +1247,9 @@
 
         .view {
             display: none;
+            padding: 2rem 3rem;
+            max-width: 1400px;
+            margin: 0 auto;
         }
         .view.active {
             display: block;
